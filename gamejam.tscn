@@ -3,6 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://iaamu5jh8wng" path="res://gamejam.png" id="1_2anfu"]
 
 [node name="Gamejam" type="Sprite2D"]
-position = Vector2(600.5, 318)
+position = Vector2(887, 149)
 scale = Vector2(0.993168, 1)
 texture = ExtResource("1_2anfu")
