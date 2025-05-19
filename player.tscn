@@ -7,7 +7,7 @@
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_ctbhi")
 jump_amount = 300
 
@@ -17,35 +17,3 @@ texture = ExtResource("2_wsp8k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cr85s")
-
-[node name="LeftRayCast" type="RayCast2D" parent="."]
-position = Vector2(-18, 0)
-target_position = Vector2(-10, 0)
-collision_mask = 4
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
-
-[node name="RightRayCast" type="RayCast2D" parent="."]
-position = Vector2(18, 0)
-target_position = Vector2(10, 0)
-collision_mask = 4
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
-
-[node name="UpRayCast" type="RayCast2D" parent="."]
-position = Vector2(0, -18)
-target_position = Vector2(0, -10)
-collision_mask = 4
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
-
-[node name="DownRayCast" type="RayCast2D" parent="."]
-position = Vector2(0, 18)
-target_position = Vector2(0, 10)
-collision_mask = 4
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
