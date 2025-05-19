@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rx84qb05ewvl"
+path="res://.godot/imported/autism_island_iii_-_back_to_the_island.mp3-c050a83798fa312e44e5d8a1cc5e3ff9.mp3str"
+
+[deps]
+
+source_file="res://Song Options/autism_island_iii_-_back_to_the_island.mp3"
+dest_files=["res://.godot/imported/autism_island_iii_-_back_to_the_island.mp3-c050a83798fa312e44e5d8a1cc5e3ff9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
