@@ -56,8 +56,8 @@ func _physics_process(delta: float) -> void:
 	# Add bounce when collide with RingBoundary
 	var collision = get_last_slide_collision()
 	if collision:
-		var other_collider: String = collision.get_collider().name
-		if other_collider == "RingBoundary":
+		var other_collider = collision.get_collider()
+		if other_collider.name == "RingBoundary":
 			var wall_normal = get_wall_normal()
 			var bounce_force := bounce_amount
 			if not is_on_floor():
