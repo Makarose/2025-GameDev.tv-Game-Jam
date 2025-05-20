@@ -17,6 +17,8 @@ var viewport_size: Vector2
 var coyote_time: float = 0.0
 var previous_player_position: Vector2
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 func _ready() -> void:
 	viewport_size = get_viewport_rect().size
