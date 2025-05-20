@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwagi4s7jtclf"]
 
-[ext_resource type="Texture2D" uid="uid://iaamu5jh8wng" path="res://gamejam.png" id="1_2anfu"]
+[ext_resource type="Texture2D" uid="uid://iaamu5jh8wng" path="res://assets/gamejam.png" id="1_a1jrw"]
 
 [node name="Gamejam" type="Sprite2D"]
 position = Vector2(891, 165)
 scale = Vector2(0.993168, 1)
-texture = ExtResource("1_2anfu")
+texture = ExtResource("1_a1jrw")
