@@ -6,5 +6,3 @@
 position = Vector2(891, 165)
 scale = Vector2(0.993168, 1)
 texture = ExtResource("1_2anfu")
-
-[node name="Test" type="Area2D" parent="."]
