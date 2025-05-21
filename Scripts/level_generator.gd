@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var y_distance_between_platforms = 32
-@export var platform_width = 128
+@export var y_distance_between_platforms = 64
+@export var platform_width = 640
 
 @export var platform_scene: PackedScene
 
@@ -21,7 +21,7 @@ func _ready():
 	# Generate level
 	viewport_size = get_viewport_rect().size
 	generated_platform_count = 0
-	start_platform_y = viewport_size.y - (y_distance_between_platforms * 2)
+	start_platform_y = viewport_size.y - (y_distance_between_platforms) # * 2
 	generate_level(start_platform_y, false) # Reset to true to generate a layer of ground platforms
 
 

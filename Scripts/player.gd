@@ -17,6 +17,7 @@ var viewport_size: Vector2
 var coyote_time: float = 0.0
 var previous_player_position: Vector2
 
+@onready var anchor: Node2D = $Anchor
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
@@ -47,6 +48,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		accelerate_horizontally(direction, delta)
+		anchor.scale.x = sign(direction) * -1
 	else:
 		apply_friction(delta)
 	
