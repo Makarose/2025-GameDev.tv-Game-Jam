@@ -8,4 +8,6 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node2D):
-	hit_something.emit()
+	if body.name == "RingBoundary":
+		hit_something.emit()
+		body.expand_ring()
