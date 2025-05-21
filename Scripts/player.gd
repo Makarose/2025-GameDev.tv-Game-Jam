@@ -18,7 +18,9 @@ var coyote_time: float = 0.0
 var previous_player_position: Vector2
 
 @onready var anchor: Node2D = $Anchor
+@onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var projectile = preload("res://Scenes/player_projectile.tscn")
 
 
 func _ready() -> void:
@@ -51,7 +53,11 @@ func _physics_process(delta: float) -> void:
 		anchor.scale.x = sign(direction) * -1
 	else:
 		apply_friction(delta)
-	
+
+	# Handle projectile TODO: create basic state machine and move "attack" into it
+	if Input.is_action_just_pressed("throw_projectile"):
+		throw_projectile(anchor.scale.x)
+
 	# For coyote jump
 	var was_on_floor := is_on_floor()
 	
@@ -71,6 +77,13 @@ func _physics_process(delta: float) -> void:
 	# Enable coyote jump
 	if was_on_floor and not is_on_floor() and velocity.y >= 0:
 		coyote_time = 0.1
+
+
+func throw_projectile(direction: int) -> void:
+	var new_projectile = projectile.instantiate()
+	new_projectile.global_position = projectile_spawn_point.global_position
+	new_projectile.set_direction(sign(direction) * -1)
+	get_tree().root.add_child(new_projectile)
 
 
 func jump() -> void:

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfl1aro2onouc"]
+
+[ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="1_4g16e"]
+[ext_resource type="Script" path="res://Scripts/player_projectile.gd" id="1_37uej"]
+[ext_resource type="Texture2D" uid="uid://cjx0r8poqvf4o" path="res://Sprites/Oranges and Bananas/yellow splat.png" id="2_1imnp"]
+[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="3_jnoer"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wijc4"]
+radius = 24.0208
+
+[node name="PlayerProjectile" type="Node2D"]
+z_index = 11
+z_as_relative = false
+script = ExtResource("1_37uej")
+
+[node name="Anchor" type="Node2D" parent="."]
+scale = Vector2(-1, 1)
+
+[node name="BananaSprite" type="Sprite2D" parent="Anchor"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_4g16e")
+
+[node name="SplatSprite" type="Sprite2D" parent="Anchor"]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1imnp")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_jnoer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_wijc4")
