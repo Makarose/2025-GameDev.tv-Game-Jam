@@ -2,6 +2,10 @@ class_name Player
 extends CharacterBody2D
 
 
+enum States { MOVE, ATTACK, DEATH }
+
+@export var state = States.MOVE
+
 @export var max_speed := 120
 @export var acceleration := 10000
 @export var air_acceleration := 2000
@@ -16,6 +20,7 @@ extends CharacterBody2D
 var viewport_size: Vector2
 var coyote_time: float = 0.0
 var previous_player_position: Vector2
+var throw_animation_playing: bool = false
 
 @onready var anchor: Node2D = $Anchor
 @onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
@@ -25,6 +30,10 @@ var previous_player_position: Vector2
 
 func _ready() -> void:
 	viewport_size = get_viewport_rect().size
+	
+	animation_player.animation_finished.connect(func(anim_name: String):
+		_on_animation_finished(anim_name)
+		)
 
 
 func _process(delta: float) -> void:
@@ -38,45 +47,78 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	coyote_time -= delta
 	
-	# Add the gravity.
-	if not is_on_floor():
-		apply_gravity(delta)
+	match state:
+		States.MOVE:
+			# Add the gravity.
+			apply_gravity(delta)
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_time > 0):
-		jump()
+			# Handle jump.
+			if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote_time > 0):
+				jump()
 
-	# Get the input direction and handle the movement/deceleration.
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		accelerate_horizontally(direction, delta)
-		anchor.scale.x = sign(direction) * -1
-	else:
-		apply_friction(delta)
-
-	# Handle projectile TODO: create basic state machine and move "attack" into it
-	if Input.is_action_just_pressed("throw_projectile"):
-		throw_projectile(anchor.scale.x)
-
-	# For coyote jump
-	var was_on_floor := is_on_floor()
-	
-	move_and_slide()
-	
-	# Add bounce when collide with RingBoundary
-	var collision = get_last_slide_collision()
-	if collision:
-		var other_collider = collision.get_collider()
-		if other_collider.name == "RingBoundary":
-			var wall_normal = get_wall_normal()
-			var bounce_force := bounce_amount
+			# Get the input direction and handle the movement/deceleration.
+			var direction: int = Input.get_axis("move_left", "move_right")
+			if direction:
+				accelerate_horizontally(direction, delta)
+				anchor.scale.x = sign(direction) * -1
+				if not throw_animation_playing:
+					animation_player.play("walk")
+			else:
+				apply_friction(delta)
+				if not throw_animation_playing:
+					animation_player.play("idle")
+				
 			if not is_on_floor():
-				bounce_force = air_bounce_amount
-			velocity = wall_normal * bounce_force
-	
-	# Enable coyote jump
-	if was_on_floor and not is_on_floor() and velocity.y >= 0:
-		coyote_time = 0.1
+				if not throw_animation_playing:
+					animation_player.play("jump")
+
+			# For coyote jump
+			var was_on_floor := is_on_floor()
+			
+			move_and_slide()
+			
+			# Add bounce when collide with RingBoundary
+			var collision = get_last_slide_collision()
+			if collision:
+				var other_collider = collision.get_collider()
+				if other_collider.name == "RingBoundary":
+					var wall_normal = get_wall_normal()
+					var bounce_force := bounce_amount
+					if not is_on_floor():
+						bounce_force = air_bounce_amount
+					velocity = wall_normal * bounce_force
+			
+			# Handle projectile
+			if Input.is_action_just_pressed("throw_projectile") and not throw_animation_playing:
+				#state = States.ATTACK
+				throw_projectile(anchor.scale.x)
+				animation_player.play("throw")
+				throw_animation_playing = true
+			
+			# Enable coyote jump
+			if was_on_floor and not is_on_floor() and velocity.y >= 0:
+				coyote_time = 0.1
+			
+		States.ATTACK:
+			pass
+			#if can_throw:
+				#can_throw = false
+				#throw_projectile(anchor.scale.x)
+				#animation_player.play("throw")
+				#
+				#apply_gravity(delta)
+				#apply_friction(delta)
+				#
+				#move_and_slide()
+		
+		States.DEATH:
+			pass
+
+
+func _on_animation_finished(anim_name: String) -> void:
+	if anim_name == "throw":
+		throw_animation_playing = false
+		#state = States.MOVE
 
 
 func throw_projectile(direction: int) -> void:
