@@ -1,15 +1,22 @@
-[gd_scene load_steps=13 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=17 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_yrajc"]
 [ext_resource type="Script" path="res://Scripts/ring_position_canvas_layer.gd" id="2_6a7ij"]
+[ext_resource type="Texture2D" uid="uid://b2k7ooimuqef0" path="res://Jungle Pack UI/PNG/upgrade/heart.png" id="2_in034"]
 [ext_resource type="Texture2D" uid="uid://dorvvcyiy68t3" path="res://assets/graybox.png" id="2_loit0"]
 [ext_resource type="Script" path="res://Scripts/ring_reference_marker.gd" id="2_r6be6"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_drt1n"]
 [ext_resource type="Script" path="res://Scripts/ring_boundary.gd" id="4_lf18l"]
+[ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="4_rakfa"]
 [ext_resource type="Texture2D" uid="uid://dbt52ox0samuk" path="res://assets/black_vignette.png" id="5_fsbbq"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
 [ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/platform.tscn" id="8_nlm3j"]
+
+[sub_resource type="Theme" id="Theme_j72e3"]
+Label/font_sizes/font_size = 64
+Label/fonts/font = ExtResource("3_drt1n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6s8q"]
 texture = ExtResource("2_loit0")
@@ -22,6 +29,41 @@ sources/0 = SubResource("TileSetAtlasSource_p6s8q")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yrajc")
+
+[node name="GameUI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="GameUI"]
+offset_right = 105.0
+offset_bottom = 94.0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/MarginContainer"]
+layout_mode = 2
+
+[node name="HeartTextureRect" type="TextureRect" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_in034")
+expand_mode = 3
+
+[node name="HealthLabel" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_j72e3")
+text = "x3"
+
+[node name="Spacer" type="Control" parent="GameUI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="BananaTextureRect" type="TextureRect" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_rakfa")
+expand_mode = 3
+
+[node name="ProjectileLabel" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_j72e3")
+text = "x3"
 
 [node name="RingPositionCanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_6a7ij")

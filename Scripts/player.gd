@@ -91,8 +91,10 @@ func _physics_process(delta: float) -> void:
 			# Handle projectile
 			if Input.is_action_just_pressed("throw_projectile") and not throw_animation_playing:
 				#state = States.ATTACK
-				animation_player.play("throw")
-				throw_animation_playing = true
+				if SignalBus.projectile_count > 0:
+					SignalBus.projectile_count -= 1
+					animation_player.play("throw")
+					throw_animation_playing = true
 			
 			# Enable coyote jump
 			if was_on_floor and not is_on_floor() and velocity.y >= 0:
