@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlwgvew0dpsth"
+path="res://.godot/imported/1up 1 - Sound effects Pack 2.wav-1e0f0ff269988e7ce0cd3badcf833e20.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/1up/WAV/1up 1 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/1up 1 - Sound effects Pack 2.wav-1e0f0ff269988e7ce0cd3badcf833e20.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

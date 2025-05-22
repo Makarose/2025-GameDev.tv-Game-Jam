@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtsoqd8og7dp7"
+path="res://.godot/imported/Lose 6 - Sound effects Pack 2.mp3-765898ae0b508a91f7a34b18b394248b.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/MP3/Lose 6 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Lose 6 - Sound effects Pack 2.mp3-765898ae0b508a91f7a34b18b394248b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

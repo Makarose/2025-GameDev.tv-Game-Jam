@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctobe8fdljfff"
+path="res://.godot/imported/Blip 3 - Sound effects Pack 2.mp3-b2b2baeb2543219ef1e9e2b0583145fc.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Blip/MP3/Blip 3 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Blip 3 - Sound effects Pack 2.mp3-b2b2baeb2543219ef1e9e2b0583145fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

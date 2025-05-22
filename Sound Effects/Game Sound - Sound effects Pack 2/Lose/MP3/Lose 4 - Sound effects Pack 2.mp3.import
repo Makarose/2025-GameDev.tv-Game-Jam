@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjttik5st6m1j"
+path="res://.godot/imported/Lose 4 - Sound effects Pack 2.mp3-3b1fb0ac422ed5ab4c441a4bb1d1bf2e.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/MP3/Lose 4 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Lose 4 - Sound effects Pack 2.mp3-3b1fb0ac422ed5ab4c441a4bb1d1bf2e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

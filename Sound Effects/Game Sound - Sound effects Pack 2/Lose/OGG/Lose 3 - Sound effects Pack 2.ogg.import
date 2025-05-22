@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2p46wgwhyful"
+path="res://.godot/imported/Lose 3 - Sound effects Pack 2.ogg-6b65de6e06e50c14fcc27cbcb13f15be.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/OGG/Lose 3 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Lose 3 - Sound effects Pack 2.ogg-6b65de6e06e50c14fcc27cbcb13f15be.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

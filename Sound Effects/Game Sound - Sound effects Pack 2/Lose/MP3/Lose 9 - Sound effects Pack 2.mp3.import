@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://blfhi0xtyr5w"
+path="res://.godot/imported/Lose 9 - Sound effects Pack 2.mp3-e02517209c4d1cdeb7535476c7c7b680.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/MP3/Lose 9 - Sound effects Pack 2.mp3"
+dest_files=["res://.godot/imported/Lose 9 - Sound effects Pack 2.mp3-e02517209c4d1cdeb7535476c7c7b680.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

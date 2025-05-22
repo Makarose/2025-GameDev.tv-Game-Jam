@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bftkio8ttu6pr"
+path="res://.godot/imported/Random 7 - Sound effects Pack 2.wav-453d79094adf8bf1e58ff16e2ca00330.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Random/WAV/Random 7 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Random 7 - Sound effects Pack 2.wav-453d79094adf8bf1e58ff16e2ca00330.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

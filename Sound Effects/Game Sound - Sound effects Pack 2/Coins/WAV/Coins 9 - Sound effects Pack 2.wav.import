@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bopub4u6krvhe"
+path="res://.godot/imported/Coins 9 - Sound effects Pack 2.wav-6cba25f42b530ac2217b7be672cc2d82.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Coins/WAV/Coins 9 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Coins 9 - Sound effects Pack 2.wav-6cba25f42b530ac2217b7be672cc2d82.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

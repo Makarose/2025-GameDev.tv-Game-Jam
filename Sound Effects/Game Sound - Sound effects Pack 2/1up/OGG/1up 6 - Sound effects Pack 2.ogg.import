@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxrb1syu2yo57"
+path="res://.godot/imported/1up 6 - Sound effects Pack 2.ogg-631738c2b2b4fbbb69b1c72a49fe9be6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/1up/OGG/1up 6 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/1up 6 - Sound effects Pack 2.ogg-631738c2b2b4fbbb69b1c72a49fe9be6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

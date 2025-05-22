@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clguleqbyqquu"
+path="res://.godot/imported/Lose 2 - Sound effects Pack 2.wav-e3e7d9f803498c9d8aa5245e36e44558.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/WAV/Lose 2 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Lose 2 - Sound effects Pack 2.wav-e3e7d9f803498c9d8aa5245e36e44558.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cykk7guh3p1no"
+path="res://.godot/imported/Random 5 - Sound effects Pack 2.wav-7c1383a96dad4da0ef15ef45fb1f2001.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Random/WAV/Random 5 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Random 5 - Sound effects Pack 2.wav-7c1383a96dad4da0ef15ef45fb1f2001.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

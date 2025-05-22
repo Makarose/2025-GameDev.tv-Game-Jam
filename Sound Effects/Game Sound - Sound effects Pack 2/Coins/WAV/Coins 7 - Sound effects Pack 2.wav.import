@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c47egv7diveit"
+path="res://.godot/imported/Coins 7 - Sound effects Pack 2.wav-811402e29b6dcf91fe468b3f0bd63ca8.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Coins/WAV/Coins 7 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Coins 7 - Sound effects Pack 2.wav-811402e29b6dcf91fe468b3f0bd63ca8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

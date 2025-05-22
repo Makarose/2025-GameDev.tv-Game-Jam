@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwttri20ojor8"
+path="res://.godot/imported/Jump 7 - Sound effects Pack 2.ogg-00588e9fc79d0e692fabe923f2de9a6e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Jump/OGG/Jump 7 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Jump 7 - Sound effects Pack 2.ogg-00588e9fc79d0e692fabe923f2de9a6e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cowyoqoeeldoi"
+path="res://.godot/imported/Laser-weapon 7 - Sound effects Pack 2.ogg-f9f9bc77fbf1f7c950baefd92e00ada3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Laser-weapon/OGG/Laser-weapon 7 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Laser-weapon 7 - Sound effects Pack 2.ogg-f9f9bc77fbf1f7c950baefd92e00ada3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

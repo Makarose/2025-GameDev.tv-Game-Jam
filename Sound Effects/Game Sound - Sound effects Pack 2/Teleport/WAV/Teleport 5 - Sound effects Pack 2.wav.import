@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ooo360v58t20"
+path="res://.godot/imported/Teleport 5 - Sound effects Pack 2.wav-640f9d9597b4bd18d624ea1ce0df0743.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Teleport/WAV/Teleport 5 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Teleport 5 - Sound effects Pack 2.wav-640f9d9597b4bd18d624ea1ce0df0743.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

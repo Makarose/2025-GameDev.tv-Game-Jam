@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2lkdk1yaw72d"
+path="res://.godot/imported/Laser-weapon 4 - Sound effects Pack 2.ogg-3005c98805d5ae2ab30ece724d667562.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Laser-weapon/OGG/Laser-weapon 4 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Laser-weapon 4 - Sound effects Pack 2.ogg-3005c98805d5ae2ab30ece724d667562.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

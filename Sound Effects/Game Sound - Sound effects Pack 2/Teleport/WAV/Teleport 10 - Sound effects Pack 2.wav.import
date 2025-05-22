@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0vd02docnu5e"
+path="res://.godot/imported/Teleport 10 - Sound effects Pack 2.wav-2f0b2700ccf255573235f8d48d671e57.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Teleport/WAV/Teleport 10 - Sound effects Pack 2.wav"
+dest_files=["res://.godot/imported/Teleport 10 - Sound effects Pack 2.wav-2f0b2700ccf255573235f8d48d671e57.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

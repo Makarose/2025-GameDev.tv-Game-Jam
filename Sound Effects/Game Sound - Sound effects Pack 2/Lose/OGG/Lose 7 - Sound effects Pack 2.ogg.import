@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cavx3iqrjqfvt"
+path="res://.godot/imported/Lose 7 - Sound effects Pack 2.ogg-f0507d0fd9adc7aa5e239faadc4f457c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Game Sound - Sound effects Pack 2/Lose/OGG/Lose 7 - Sound effects Pack 2.ogg"
+dest_files=["res://.godot/imported/Lose 7 - Sound effects Pack 2.ogg-f0507d0fd9adc7aa5e239faadc4f457c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

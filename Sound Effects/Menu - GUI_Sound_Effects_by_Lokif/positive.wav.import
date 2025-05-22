@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cb556dhmei3bq"
+path="res://.godot/imported/positive.wav-11576d6b87f5bf89054e76171fca055a.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Menu - GUI_Sound_Effects_by_Lokif/positive.wav"
+dest_files=["res://.godot/imported/positive.wav-11576d6b87f5bf89054e76171fca055a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
