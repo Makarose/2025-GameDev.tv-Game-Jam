@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1w88xtqfpvc7"]
+[gd_scene load_steps=5 format=3 uid="uid://b1w88xtqfpvc7"]
 
+[ext_resource type="Script" path="res://Scripts/platform.gd" id="1_mc583"]
 [ext_resource type="Texture2D" uid="uid://c4qhe2r1m4x6g" path="res://Mossy Tileset/Mossy - FloatingPlatforms.png" id="1_wsduk"]
+[ext_resource type="PackedScene" uid="uid://d2bs1c62vcloh" path="res://Scenes/single_projectile_pickup.tscn" id="2_xd8xr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lv1ye"]
-size = Vector2(473, 79)
+size = Vector2(478, 79)
 
 [node name="Platform" type="StaticBody2D"]
 collision_layer = 2
+script = ExtResource("1_mc583")
+projectile_pickup = ExtResource("2_xd8xr")
+projectile_width = 64
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.74, 0.74, 0.74, 1)
@@ -18,6 +23,6 @@ region_enabled = true
 region_rect = Rect2(21, 1566, 2012, 450)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(250.5, 39.5)
+position = Vector2(250, 39.5)
 shape = SubResource("RectangleShape2D_lv1ye")
 one_way_collision = true

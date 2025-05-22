@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=17 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dbt52ox0samuk" path="res://assets/black_vignette.png" id="5_fsbbq"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
 [ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/platform.tscn" id="8_nlm3j"]
-[ext_resource type="PackedScene" uid="uid://d2bs1c62vcloh" path="res://Scenes/single_projectile_pickup.tscn" id="15_biwvs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6s8q"]
 texture = ExtResource("2_loit0")
@@ -27,21 +26,6 @@ sources/0 = SubResource("TileSetAtlasSource_p6s8q")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yrajc")
-
-[node name="SingleProjectilePickup" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(839, 972)
-
-[node name="SingleProjectilePickup2" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(735, 972)
-
-[node name="SingleProjectilePickup3" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(612, 972)
-
-[node name="SingleProjectilePickup4" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(508, 972)
-
-[node name="SingleProjectilePickup5" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(1229, 972)
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
