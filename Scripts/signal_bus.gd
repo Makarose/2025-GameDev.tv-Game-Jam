@@ -28,4 +28,4 @@ func _process(delta: float) -> void:
 
 
 func convert_distance_to_feet(pixel_distance: int) -> int:
-	return round(pixel_distance / 100)
+	return round(pixel_distance / 50)
