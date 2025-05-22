@@ -22,6 +22,9 @@ var coyote_time: float = 0.0
 var previous_player_position: Vector2
 var throw_animation_playing: bool = false
 
+var player_start_y_position: int
+var max_player_height: int = 0
+
 @onready var anchor: Node2D = $Anchor
 @onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -30,6 +33,7 @@ var throw_animation_playing: bool = false
 
 func _ready() -> void:
 	viewport_size = get_viewport_rect().size
+	player_start_y_position = global_position.y
 	
 	animation_player.animation_finished.connect(func(anim_name: String):
 		_on_animation_finished(anim_name)
@@ -77,6 +81,9 @@ func _physics_process(delta: float) -> void:
 			
 			move_and_slide()
 			
+			# Keep track of maximum height reached
+			calculate_max_height()
+			
 			# Add bounce when collide with RingBoundary
 			var collision = get_last_slide_collision()
 			if collision:
@@ -114,6 +121,13 @@ func _physics_process(delta: float) -> void:
 		
 		States.DEATH:
 			pass
+
+
+func calculate_max_height() -> void:
+	var current_height = abs(global_position.y - player_start_y_position)
+	if current_height > max_player_height:
+		max_player_height = current_height
+		SignalBus.distance_climbed = max_player_height
 
 
 func _on_animation_finished(anim_name: String) -> void:

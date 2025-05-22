@@ -4,7 +4,6 @@ extends Camera2D
 var player: Player = null
 var viewport_size: Vector2
 
-
 func _ready() -> void:
 	viewport_size = get_viewport_rect().size
 	

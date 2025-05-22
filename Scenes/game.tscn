@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=18 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
@@ -8,17 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dorvvcyiy68t3" path="res://assets/graybox.png" id="2_loit0"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="2_ltyt3"]
 [ext_resource type="Script" path="res://Scripts/ring_reference_marker.gd" id="2_r6be6"]
-[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_drt1n"]
 [ext_resource type="Script" path="res://Scripts/ring_boundary.gd" id="4_lf18l"]
 [ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="4_rakfa"]
+[ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="5_55roh"]
 [ext_resource type="Texture2D" uid="uid://dbt52ox0samuk" path="res://assets/black_vignette.png" id="5_fsbbq"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
 [ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/platform.tscn" id="8_nlm3j"]
 [ext_resource type="PackedScene" uid="uid://d2bs1c62vcloh" path="res://Scenes/single_projectile_pickup.tscn" id="15_biwvs"]
-
-[sub_resource type="Theme" id="Theme_j72e3"]
-Label/font_sizes/font_size = 64
-Label/fonts/font = ExtResource("3_drt1n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6s8q"]
 texture = ExtResource("2_loit0")
@@ -31,6 +27,21 @@ sources/0 = SubResource("TileSetAtlasSource_p6s8q")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yrajc")
+
+[node name="SingleProjectilePickup" parent="." instance=ExtResource("15_biwvs")]
+position = Vector2(839, 972)
+
+[node name="SingleProjectilePickup2" parent="." instance=ExtResource("15_biwvs")]
+position = Vector2(735, 972)
+
+[node name="SingleProjectilePickup3" parent="." instance=ExtResource("15_biwvs")]
+position = Vector2(612, 972)
+
+[node name="SingleProjectilePickup4" parent="." instance=ExtResource("15_biwvs")]
+position = Vector2(508, 972)
+
+[node name="SingleProjectilePickup5" parent="." instance=ExtResource("15_biwvs")]
+position = Vector2(1229, 972)
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -49,10 +60,15 @@ layout_mode = 2
 texture = ExtResource("2_in034")
 expand_mode = 3
 
-[node name="HealthLabel" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+[node name="x" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_j72e3")
-text = "x3"
+theme = ExtResource("5_55roh")
+text = "x"
+
+[node name="HealthCount" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_55roh")
+text = "3"
 
 [node name="Spacer" type="Control" parent="GameUI/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 0)
@@ -63,10 +79,24 @@ layout_mode = 2
 texture = ExtResource("4_rakfa")
 expand_mode = 3
 
-[node name="ProjectileLabel" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+[node name="x2" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_j72e3")
-text = "x0"
+theme = ExtResource("5_55roh")
+text = "x"
+
+[node name="ProjectileCount" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_55roh")
+text = "0"
+
+[node name="Spacer2" type="Control" parent="GameUI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="DistanceClimbed" type="Label" parent="GameUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_55roh")
+text = "height: 0"
 
 [node name="RingPositionCanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_6a7ij")
@@ -102,20 +132,11 @@ platform_scene = ExtResource("8_nlm3j")
 [node name="Player" parent="." instance=ExtResource("1_bbx0x")]
 position = Vector2(1008, 1056)
 max_speed = 200
-air_friction = 600
+air_friction = 700
 up_gravity = 700
 down_gravity = 800
-jump_amount = 450
+jump_amount = 550
 
 [node name="GroundTileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("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AABLAEIAAAAAAAAAAABLAEMAAAAAAAAAAABMAEIAAAAAAAAAAABMAEMAAAAAAAAAAABNAEIAAAAAAAAAAABNAEMAAAAAAAAAAABOAEIAAAAAAAAAAABOAEMAAAAAAAAAAABPAEIAAAAAAAAAAABPAEMAAAAAAAAAAABQAEIAAAAAAAAAAABQAEMAAAAAAAAAAABRAEIAAAAAAAAAAABRAEMAAAAAAAAAAABSAEIAAAAAAAAAAABSAEMAAAAAAAAAAABTAEIAAAAAAAAAAABTAEMAAAAAAAAAAABUAEIAAAAAAAAAAABUAEMAAAAAAAAAAABVAEIAAAAAAAAAAABVAEMAAAAAAAAAAABWAEIAAAAAAAAAAABWAEMAAAAAAAAAAABXAEIAAAAAAAAAAABXAEMAAAAAAAAAAABYAEIAAAAAAAAAAABYAEMAAAAAAAAAAABZAEIAAAAAAAAAAABZAEMAAAAAAAAAAABaAEIAAAAAAAAAAABaAEMAAAAAAAAAAABbAEIAAAAAAAAAAABbAEMAAAAAAAAAAABcAEIAAAAAAAAAAABcAEMAAAAAAAAAAABdAEIAAAAAAAAAAABdAEMAAAAAAAAAAABeAEIAAAAAAAAAAABeAEMAAAAAAAAAAABfAEIAAAAAAAAAAABfAEMAAAAAAAAAAABgAEIAAAAAAAAAAABgAEMAAAAAAAAAAABhAEIAAAAAAAAAAABhAEMAAAAAAAAAAABiAEIAAAAAAAAAAABiAEMAAAAAAAAAAABjAEIAAAAAAAAAAABjAEMAAAAAAAAAAABkAEIAAAAAAAAAAABkAEMAAAAAAAAAAABlAEIAAAAAAAAAAABlAEMAAAAAAAAAAABmAEIAAAAAAAAAAABmAEMAAAAAAAAAAABnAEIAAAAAAAAAAABnAEMAAAAAAAAAAABoAEIAAAAAAAAAAABoAEMAAAAAAAAAAABpAEIAAAAAAAAAAABpAEMAAAAAAAAAAABqAEIAAAAAAAAAAABqAEMAAAAAAAAAAABrAEIAAAAAAAAAAABrAEMAAAAAAAAAAABsAEIAAAAAAAAAAABsAEMAAAAAAAAAAABtAEIAAAAAAAAAAABtAEMAAAAAAAAAAABuAEIAAAAAAAAAAABuAEMAAAAAAAAAAABvAEIAAAAAAAAAAABvAEMAAAAAAAAAAABwAEIAAAAAAAAAAABwAEMAAAAAAAAAAABxAEIAAAAAAAAAAABxAEMAAAAAAAAAAAByAEIAAAAAAAAAAAByAEMAAAAAAAAAAABzAEIAAAAAAAAAAABzAEMAAAAAAAAAAAB0AEIAAAAAAAAAAAB0AEMAAAAAAAAAAAB1AEIAAAAAAAAAAAB1AEMAAAAAAAAAAAB2AEIAAAAAAAAAAAB2AEMAAAAAAAAAAAB3AEIAAAAAAAAAAAB3AEMAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_rbbwr")
-
-[node name="SingleProjectilePickup" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(791, 975)
-
-[node name="SingleProjectilePickup2" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(690, 972)
-
-[node name="SingleProjectilePickup3" parent="." instance=ExtResource("15_biwvs")]
-position = Vector2(1228, 970)
