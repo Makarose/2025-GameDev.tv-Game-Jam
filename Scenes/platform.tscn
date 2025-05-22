@@ -9,6 +9,7 @@ size = Vector2(478, 79)
 
 [node name="Platform" type="StaticBody2D"]
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_mc583")
 projectile_pickup = ExtResource("2_xd8xr")
 projectile_width = 64
