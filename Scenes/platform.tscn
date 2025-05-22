@@ -1,21 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1w88xtqfpvc7"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_gqsfu"]
+[ext_resource type="Texture2D" uid="uid://c4qhe2r1m4x6g" path="res://Mossy Tileset/Mossy - FloatingPlatforms.png" id="1_wsduk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hsmj"]
-size = Vector2(640, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv1ye"]
+size = Vector2(473, 79)
 
 [node name="Platform" type="StaticBody2D"]
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.74, 0.74, 0.74, 1)
-position = Vector2(0, -16)
-scale = Vector2(640, 32)
-texture = SubResource("CanvasTexture_gqsfu")
+position = Vector2(0, -15)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_wsduk")
 centered = false
+region_enabled = true
+region_rect = Rect2(21, 1566, 2012, 450)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(320, 0)
-shape = SubResource("RectangleShape2D_8hsmj")
+position = Vector2(250.5, 39.5)
+shape = SubResource("RectangleShape2D_lv1ye")
 one_way_collision = true

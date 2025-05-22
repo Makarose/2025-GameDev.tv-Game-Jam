@@ -91,7 +91,6 @@ func _physics_process(delta: float) -> void:
 			# Handle projectile
 			if Input.is_action_just_pressed("throw_projectile") and not throw_animation_playing:
 				#state = States.ATTACK
-				throw_projectile(anchor.scale.x)
 				animation_player.play("throw")
 				throw_animation_playing = true
 			
@@ -121,7 +120,8 @@ func _on_animation_finished(anim_name: String) -> void:
 		#state = States.MOVE
 
 
-func throw_projectile(direction: int) -> void:
+func throw_projectile() -> void:
+	var direction = anchor.scale.x
 	var new_projectile = projectile.instantiate()
 	new_projectile.global_position = projectile_spawn_point.global_position
 	new_projectile.set_direction(sign(direction) * -1)

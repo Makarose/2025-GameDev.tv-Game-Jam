@@ -1,23 +1,24 @@
 extends Node2D
 
-@export var y_distance_between_platforms = 64
-@export var platform_width = 640
-
+@export var y_distance_between_platforms = 150
 @export var platform_scene: PackedScene
-
-@onready var platform_parent = $PlatformParent
-
 
 # Level gen variables
 var viewport_size
 var start_platform_y
 var level_size = 50
 var generated_platform_count = 0
+var platform_width: int = 503
 
 var player: Player = null
 
+@onready var platform_parent = $PlatformParent
+
 
 func _ready():
+	# Get dimensions for this platform TODO: create method to figure dimensions of platform once instantiated
+	#platform_width = sprite_2d.get_rect().size.x * sprite_2d.scale.x
+	
 	# Generate level
 	viewport_size = get_viewport_rect().size
 	generated_platform_count = 0
