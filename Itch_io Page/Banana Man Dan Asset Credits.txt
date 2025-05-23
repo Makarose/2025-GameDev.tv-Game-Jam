@@ -1,0 +1,27 @@
+Music
+
+asset name: Jungle
+credit: Michael Robinson Homingstar
+website: https://opengameart.org/content/jungle
+
+
+
+Images
+
+asset name: Mossy Cavern
+credit: Maaot 
+website: https://maaot.itch.io/mossy-cavern
+
+asset name: Customizable Stickman Hypercasual
+credit: Thcyrax
+website: https://thcyrax.itch.io/customizable-stickman-hypercasual
+
+
+
+Font
+
+asset name: Free Cheese Font
+credit: GGBotNet
+website: https://ggbot.itch.io/free-cheese-font
+
+
