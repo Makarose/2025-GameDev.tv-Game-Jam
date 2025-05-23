@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://do6rvt2en8bg4"]
+
+[ext_resource type="Texture2D" uid="uid://bg3p6knbyg68u" path="res://Mossy Tileset/Mossy Hills Sprites/004.png" id="1_b1qgv"]
+[ext_resource type="Texture2D" uid="uid://b5dkrw4tv1ql7" path="res://Mossy Tileset/Background Decorations/000.png" id="2_fll5i"]
+[ext_resource type="Texture2D" uid="uid://0xtgbhkxbk1w" path="res://Mossy Tileset/Background Decorations/001.png" id="3_hhb42"]
+[ext_resource type="Texture2D" uid="uid://kacjbv6rmjrp" path="res://Mossy Tileset/Background Decorations/005.png" id="5_dxnou"]
+
+[node name="Foreground" type="CanvasLayer"]
+
+[node name="006" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(1560, 7.00009)
+rotation = 3.44615
+texture = ExtResource("1_b1qgv")
+
+[node name="007" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(288, 899)
+rotation = 0.88122
+scale = Vector2(1, 1.23359)
+texture = ExtResource("1_b1qgv")
+
+[node name="000" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(966, -140)
+rotation = -1.64869
+scale = Vector2(0.589924, 0.701787)
+texture = ExtResource("2_fll5i")
+
+[node name="001" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(989, 1203)
+rotation = 4.68747
+scale = Vector2(0.568944, 0.854784)
+texture = ExtResource("2_fll5i")
+
+[node name="002" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(88, 616)
+rotation = 0.223381
+texture = ExtResource("3_hhb42")
+
+[node name="003" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1810, 400)
+texture = ExtResource("3_hhb42")
+
+[node name="011" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(1280, -523)
+rotation = 2.80186
+texture = ExtResource("5_dxnou")
+
+[node name="008" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1966, 1407)
+rotation = -0.950007
+scale = Vector2(1.36823, 1.8347)
+texture = ExtResource("5_dxnou")
