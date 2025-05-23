@@ -23,5 +23,3 @@ Font
 asset name: Free Cheese Font
 credit: GGBotNet
 website: https://ggbot.itch.io/free-cheese-font
-
-
