@@ -2,18 +2,20 @@
 
 [ext_resource type="Script" path="res://Scripts/platform.gd" id="1_b0ucr"]
 [ext_resource type="Texture2D" uid="uid://c4qhe2r1m4x6g" path="res://Mossy Tileset/Mossy - FloatingPlatforms.png" id="1_rcmgx"]
-[ext_resource type="PackedScene" uid="uid://dfl1aro2onouc" path="res://Scenes/player_projectile.tscn" id="2_yh78f"]
+[ext_resource type="PackedScene" uid="uid://d2bs1c62vcloh" path="res://Scenes/single_projectile_pickup.tscn" id="2_s6n1k"]
 [ext_resource type="PackedScene" uid="uid://mjw08h857u3e" path="res://Scenes/slime_enemy.tscn" id="3_aeijt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruiiu"]
 size = Vector2(361, 70)
 
 [node name="L_Platform" type="StaticBody2D"]
+collision_layer = 2
 script = ExtResource("1_b0ucr")
-projectile_pickup = ExtResource("2_yh78f")
+projectile_pickup = ExtResource("2_s6n1k")
 projectile_width = 64
 slime_enemy = ExtResource("3_aeijt")
 slime_enemy_width = 150
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -15)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bcol8p06ob8xw"]
 
 [ext_resource type="Script" path="res://Scripts/platform.gd" id="1_cwvhe"]
-[ext_resource type="PackedScene" uid="uid://dfl1aro2onouc" path="res://Scenes/player_projectile.tscn" id="2_sjs3v"]
+[ext_resource type="PackedScene" uid="uid://d2bs1c62vcloh" path="res://Scenes/single_projectile_pickup.tscn" id="2_p2kk5"]
 [ext_resource type="PackedScene" uid="uid://mjw08h857u3e" path="res://Scenes/slime_enemy.tscn" id="3_m1tjr"]
 [ext_resource type="Texture2D" uid="uid://c4qhe2r1m4x6g" path="res://Mossy Tileset/Mossy - FloatingPlatforms.png" id="4_fry6m"]
 
@@ -10,8 +10,9 @@ resource_local_to_scene = true
 size = Vector2(233, 64)
 
 [node name="M_Platform_01" type="StaticBody2D"]
+collision_layer = 2
 script = ExtResource("1_cwvhe")
-projectile_pickup = ExtResource("2_sjs3v")
+projectile_pickup = ExtResource("2_p2kk5")
 projectile_width = 64
 slime_enemy = ExtResource("3_m1tjr")
 slime_enemy_width = 150
