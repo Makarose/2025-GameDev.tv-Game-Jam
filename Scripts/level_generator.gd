@@ -28,7 +28,7 @@ func _ready():
 	viewport_size = get_viewport_rect().size
 	generated_platform_count = 0
 	start_platform_y = viewport_size.y - (y_distance_between_platforms) # * 2
-	generate_level(start_platform_y, false) # Reset to true to generate a layer of ground platforms
+	generate_level(start_platform_y)
 
 
 func _process(_delta):
@@ -37,7 +37,7 @@ func _process(_delta):
 		var end_of_level_pos = start_platform_y - (generated_platform_count * y_distance_between_platforms)
 		var threshold = end_of_level_pos + (y_distance_between_platforms * 6)
 		if py <= threshold:
-			generate_level(end_of_level_pos, false)
+			generate_level(end_of_level_pos)
 
 
 func setup(_player: Player):
@@ -45,44 +45,40 @@ func setup(_player: Player):
 		player = _player
 
 
-func create_platform(location: Vector2):
+func create_platform():
 	var index: int = randi_range(0, platforms_array_size - 1)
 	var random_platform = platforms_array[index]
 	var new_platform = random_platform.instantiate()
 	platform_parent.add_child(new_platform)
-	# TODO: refactor below line, it is ugly
-	var sprite_width = new_platform.get_node("Sprite2D").get_rect().size.x * new_platform.get_node("Sprite2D").scale.x
-	new_platform.global_position = location - Vector2(sprite_width, 0)
 	
 	return new_platform
 
 
-func generate_level(start_y: float, generate_ground: bool):
-	# Generate ground
-	#if generate_ground:
-		#var ground_layer_platform_count = (viewport_size.x / platform_width) + 1
-		#var ground_layer_y_offset = 62
-		#for i in range(ground_layer_platform_count):
-			#var ground_location = (Vector2(i * platform_width, viewport_size.y - ground_layer_y_offset))
-			#create_platform(ground_location)
-	
+func generate_level(start_y: float):
 	# Generate two randomly-selected platforms per y-position
 	var max_x_position_left = viewport_size.x / 2
 	var max_x_position_right = viewport_size.x
 	for i in range(level_size):
 		# Generate left screen platform
-		var random_x_left = randf_range(0.0, max_x_position_left)
+		var left_platform = create_platform()
+		# TODO: refactor below line, it is ugly
+		var left_sprite_width = left_platform.get_node("Sprite2D").get_rect().size.x * left_platform.get_node("Sprite2D").scale.x
+		var random_x_left = randf_range(0.0, max_x_position_left - left_sprite_width)
 		var location_left: Vector2 = Vector2.ZERO
 		location_left.x = random_x_left
 		location_left.y = start_y - (i * y_distance_between_platforms)
-		create_platform(location_left)
+		left_platform.global_position = location_left
+		
 		
 		# Generate right screen platform
-		var random_x_right = randf_range(max_x_position_left, max_x_position_right)
+		var right_platform = create_platform()
+		# TODO: refactor below line, it is ugly
+		var right_sprite_width = right_platform.get_node("Sprite2D").get_rect().size.x * right_platform.get_node("Sprite2D").scale.x
+		var random_x_right = randf_range(max_x_position_left, max_x_position_right - right_sprite_width)
 		var location_right: Vector2 = Vector2.ZERO
 		location_right.x = random_x_right
 		location_right.y = start_y - (i * y_distance_between_platforms)
-		create_platform(location_right)
+		right_platform.global_position = location_right
 		
 		# Two platforms on one line counts as one platform for purpose of calculating y-distance
 		generated_platform_count += 1
