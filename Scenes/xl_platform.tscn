@@ -17,7 +17,6 @@ slime_enemy = ExtResource("3_7bi3o")
 slime_enemy_width = 150
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.74, 0.74, 0.74, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_wsduk")

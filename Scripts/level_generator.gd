@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var y_distance_between_platforms = 150
+@export var y_distance_between_platforms = 250
 @export var platforms_array: Array[PackedScene]
 
 # Level gen variables
@@ -8,7 +8,7 @@ var viewport_size
 var start_platform_y
 var level_size = 50
 var generated_platform_count = 0
-var platform_width: int = 503
+var platform_width: int = 150
 var platforms_array_size: int
 
 var player: Player = null
@@ -46,11 +46,14 @@ func setup(_player: Player):
 
 
 func create_platform(location: Vector2):
-	var index: int = randi_range(0, 3)
+	var index: int = randi_range(0, platforms_array_size - 1)
 	var random_platform = platforms_array[index]
 	var new_platform = random_platform.instantiate()
-	new_platform.global_position = location
 	platform_parent.add_child(new_platform)
+	# TODO: refactor below line, it is ugly
+	var sprite_width = new_platform.get_node("Sprite2D").get_rect().size.x * new_platform.get_node("Sprite2D").scale.x
+	new_platform.global_position = location - Vector2(sprite_width, 0)
+	
 	return new_platform
 
 
@@ -63,12 +66,23 @@ func generate_level(start_y: float, generate_ground: bool):
 			#var ground_location = (Vector2(i * platform_width, viewport_size.y - ground_layer_y_offset))
 			#create_platform(ground_location)
 	
-	# Generate rest of level
-	var max_x_position = viewport_size.x - platform_width
+	# Generate two randomly-selected platforms per y-position
+	var max_x_position_left = viewport_size.x / 2
+	var max_x_position_right = viewport_size.x
 	for i in range(level_size):
-		var random_x = randf_range(0.0, max_x_position)
-		var location: Vector2 = Vector2.ZERO
-		location.x = random_x
-		location.y = start_y - (i * y_distance_between_platforms)
-		create_platform(location)
+		# Generate left screen platform
+		var random_x_left = randf_range(0.0, max_x_position_left)
+		var location_left: Vector2 = Vector2.ZERO
+		location_left.x = random_x_left
+		location_left.y = start_y - (i * y_distance_between_platforms)
+		create_platform(location_left)
+		
+		# Generate right screen platform
+		var random_x_right = randf_range(max_x_position_left, max_x_position_right)
+		var location_right: Vector2 = Vector2.ZERO
+		location_right.x = random_x_right
+		location_right.y = start_y - (i * y_distance_between_platforms)
+		create_platform(location_right)
+		
+		# Two platforms on one line counts as one platform for purpose of calculating y-distance
 		generated_platform_count += 1
