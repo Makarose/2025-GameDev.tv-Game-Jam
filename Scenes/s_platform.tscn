@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5bpsm74rddqr"]
+
+[ext_resource type="Script" path="res://Scripts/platform.gd" id="1_ggl8p"]
+[ext_resource type="PackedScene" uid="uid://dfl1aro2onouc" path="res://Scenes/player_projectile.tscn" id="2_umuep"]
+[ext_resource type="PackedScene" uid="uid://mjw08h857u3e" path="res://Scenes/slime_enemy.tscn" id="3_on7df"]
+[ext_resource type="Texture2D" uid="uid://c4qhe2r1m4x6g" path="res://Mossy Tileset/Mossy - FloatingPlatforms.png" id="4_x07yt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruiiu"]
+resource_local_to_scene = true
+size = Vector2(70, 56.5)
+
+[node name="S_Platform" type="StaticBody2D"]
+script = ExtResource("1_ggl8p")
+projectile_pickup = ExtResource("2_umuep")
+projectile_width = 64
+slime_enemy = ExtResource("3_on7df")
+slime_enemy_width = 150
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_x07yt")
+centered = false
+region_enabled = true
+region_rect = Rect2(47, 542, 381, 368)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(47, 27.75)
+shape = SubResource("RectangleShape2D_ruiiu")
+one_way_collision = true

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c21bbbmd0n12n"]
+[gd_scene load_steps=3 format=3 uid="uid://c21bbbmd0n12n"]
 
 [ext_resource type="Script" path="res://Scripts/level_generator.gd" id="1_h8ut2"]
+[ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/xl_platform.tscn" id="2_y1nhe"]
 
 [node name="LevelGenerator" type="Node2D"]
 script = ExtResource("1_h8ut2")
+platform_scene = ExtResource("2_y1nhe")
 
 [node name="PlatformParent" type="Node2D" parent="."]

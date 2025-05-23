@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lv1ye"]
 size = Vector2(478, 79)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="XL_Platform" type="StaticBody2D"]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_mc583")

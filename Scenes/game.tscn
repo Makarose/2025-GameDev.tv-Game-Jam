@@ -13,7 +13,7 @@
 [ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="5_55roh"]
 [ext_resource type="Texture2D" uid="uid://dbt52ox0samuk" path="res://assets/black_vignette.png" id="5_fsbbq"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
-[ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/platform.tscn" id="8_nlm3j"]
+[ext_resource type="PackedScene" uid="uid://b1w88xtqfpvc7" path="res://Scenes/xl_platform.tscn" id="8_nlm3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr1ly"]
 
