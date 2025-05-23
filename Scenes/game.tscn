@@ -32,7 +32,6 @@ sources/0 = SubResource("TileSetAtlasSource_p6s8q")
 script = ExtResource("1_yrajc")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
-visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -97,7 +96,6 @@ script = ExtResource("2_6a7ij")
 script = ExtResource("2_r6be6")
 
 [node name="RingBoundary" type="StaticBody2D" parent="."]
-visible = false
 z_index = 10
 scale = Vector2(1.25, 1.25)
 collision_layer = 4
@@ -126,6 +124,7 @@ shape = SubResource("RectangleShape2D_lr1ly")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D"]
 stream = ExtResource("14_bthex")
+autoplay = true
 
 [node name="LevelGenerator" parent="." instance=ExtResource("7_pa1g6")]
 
@@ -142,6 +141,5 @@ tile_map_data = PackedByteArray("AAAAAEMAAAAAAAAAAAABAEMAAAAAAAAAAAACAEMAAAAAAAA
 tile_set = SubResource("TileSet_rbbwr")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("16_jxsf0")]
-visible = false
 
 [connection signal="body_entered" from="Camera2D/KillZone" to="Camera2D" method="_on_kill_zone_body_entered"]
