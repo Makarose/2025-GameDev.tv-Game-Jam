@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 
-@onready var health_label: Label = $MarginContainer/HBoxContainer/HealthCount
-@onready var projectile_label: Label = $MarginContainer/HBoxContainer/ProjectileCount
-@onready var distance_label: Label = $MarginContainer/HBoxContainer/DistanceClimbed
+@onready var health_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/HealthCount
+@onready var projectile_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/ProjectileCount
+@onready var distance_label: Label = $MarginContainer/VBoxContainer/DistanceClimbed
 
 
 func _ready() -> void:
