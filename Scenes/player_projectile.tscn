@@ -22,7 +22,7 @@ texture = ExtResource("1_4g16e")
 
 [node name="SplatSprite" type="Sprite2D" parent="Anchor"]
 visible = false
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_1imnp")
 
 [node name="Hitbox" type="Area2D" parent="."]

@@ -12,6 +12,7 @@ var platform_sprite_width: int
 var platform_position: Vector2
 var pickup_left_margin: int = 20
 var pickup_y_pos: int = -50
+var enemy_left_margin = 50
 var enemy_y_pos: int
 var enemy_created: bool = false
 
@@ -38,7 +39,7 @@ func add_random_objects() -> void:
 	for i in slots:
 		var pickup_x_pos: int = (i * projectile_width) + pickup_left_margin
 		var random_number = randi_range(0, 19)
-		if random_number <= 4:
+		if random_number <= 2:
 			var new_pickup = projectile_pickup.instantiate()
 			add_child(new_pickup)
 			new_pickup.position = Vector2(pickup_x_pos, pickup_y_pos)
@@ -46,4 +47,4 @@ func add_random_objects() -> void:
 			enemy_created = true
 			var new_enemy = slime_enemy.instantiate()
 			add_child(new_enemy)
-			new_enemy.position = Vector2(pickup_x_pos + 25, enemy_y_pos)
+			new_enemy.position = Vector2(pickup_x_pos + enemy_left_margin, enemy_y_pos)

@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var y_distance_between_platforms = 150
-@export var platform_scene: PackedScene
+@export var platforms_array: Array[PackedScene]
 
 # Level gen variables
 var viewport_size
@@ -9,6 +9,7 @@ var start_platform_y
 var level_size = 50
 var generated_platform_count = 0
 var platform_width: int = 503
+var platforms_array_size: int
 
 var player: Player = null
 
@@ -18,6 +19,10 @@ var player: Player = null
 func _ready():
 	# Get dimensions for this platform TODO: create method to figure dimensions of platform once instantiated
 	#platform_width = sprite_2d.get_rect().size.x * sprite_2d.scale.x
+	
+	# Get number of elements in platform array
+	if not platforms_array.is_empty():
+		platforms_array_size = platforms_array.size()
 	
 	# Generate level
 	viewport_size = get_viewport_rect().size
@@ -41,20 +46,22 @@ func setup(_player: Player):
 
 
 func create_platform(location: Vector2):
-	var platform = platform_scene.instantiate()
-	platform.global_position = location
-	platform_parent.add_child(platform)
-	return platform
+	var index: int = randi_range(0, 3)
+	var random_platform = platforms_array[index]
+	var new_platform = random_platform.instantiate()
+	new_platform.global_position = location
+	platform_parent.add_child(new_platform)
+	return new_platform
 
 
 func generate_level(start_y: float, generate_ground: bool):
 	# Generate ground
-	if generate_ground:
-		var ground_layer_platform_count = (viewport_size.x / platform_width) + 1
-		var ground_layer_y_offset = 62
-		for i in range(ground_layer_platform_count):
-			var ground_location = (Vector2(i * platform_width, viewport_size.y - ground_layer_y_offset))
-			create_platform(ground_location)
+	#if generate_ground:
+		#var ground_layer_platform_count = (viewport_size.x / platform_width) + 1
+		#var ground_layer_y_offset = 62
+		#for i in range(ground_layer_platform_count):
+			#var ground_location = (Vector2(i * platform_width, viewport_size.y - ground_layer_y_offset))
+			#create_platform(ground_location)
 	
 	# Generate rest of level
 	var max_x_position = viewport_size.x - platform_width
