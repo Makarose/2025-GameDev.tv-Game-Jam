@@ -4,5 +4,5 @@
 
 [resource]
 shader = ExtResource("1_1nywv")
-shader_parameter/flash_enabled = true
+shader_parameter/flash_enabled = false
 shader_parameter/flash_color = Color(1, 1, 1, 1)

@@ -11,8 +11,8 @@
 [ext_resource type="Script" path="res://Scripts/ring_boundary.gd" id="4_lf18l"]
 [ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="4_rakfa"]
 [ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="5_55roh"]
-[ext_resource type="Texture2D" uid="uid://dbt52ox0samuk" path="res://assets/black_vignette.png" id="5_fsbbq"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
+[ext_resource type="Texture2D" uid="uid://cgc3wsxwn2twy" path="res://assets/green_vignette.png" id="10_6gtr0"]
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="14_bthex"]
 [ext_resource type="PackedScene" uid="uid://do6rvt2en8bg4" path="res://Scenes/foreground.tscn" id="15_4jp4s"]
 [ext_resource type="PackedScene" uid="uid://co1hydikp5oom" path="res://Scenes/background.tscn" id="16_jxsf0"]
@@ -112,12 +112,12 @@ collision_mask = 0
 script = ExtResource("4_lf18l")
 contract_rate = 0.1
 contract_acceleration = 0.0
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RingBoundary"]
-position = Vector2(16, -4)
-scale = Vector2(1.835, 1.835)
-texture = ExtResource("5_fsbbq")
+modulate = Color(0.75, 0.75, 0.75, 1)
+position = Vector2(-72.5, 12.5)
+scale = Vector2(3.41, 3.41)
+texture = ExtResource("10_6gtr0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RingBoundary"]
 build_mode = 1
