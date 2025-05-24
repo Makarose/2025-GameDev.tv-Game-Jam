@@ -13,9 +13,10 @@ var player_health: int = 3:
 	set(value):
 		player_health = value
 		player_health_updated.emit(player_health)
-		player_damage.emit()
 		if player_health <= 0:
 			game_over.emit()
+		else:
+			player_damage.emit()
 var projectile_count: int = 0:
 	set(value):
 		projectile_count = value

@@ -16,6 +16,7 @@ enum States { MOVE, DAMAGE, DEATH }
 @export var jump_amount := 200
 @export var bounce_amount := 600
 @export var air_bounce_amount := 400
+@export var knockback_amount := 20
 
 var viewport_size: Vector2
 var coyote_time: float = 0.0
@@ -25,11 +26,13 @@ var throw_animation_playing: bool = false
 var player_start_y_position: int
 var max_player_height: int = 0
 
-#var player_death_position: Vector2
+var is_invincible: bool = false
+var game_over: bool = false
 
 @onready var anchor: Node2D = $Anchor
 @onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var effects_animation_player: AnimationPlayer = $EffectsAnimationPlayer
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var projectile = preload("res://Scenes/player_projectile.tscn")
 
@@ -40,6 +43,9 @@ func _ready() -> void:
 	
 	animation_player.animation_finished.connect(func(anim_name: String):
 		_on_animation_finished(anim_name)
+		)
+	effects_animation_player.animation_finished.connect(func(anim_name: String):
+		_on_effects_animation_finished(anim_name)
 		)
 
 
@@ -111,28 +117,49 @@ func _physics_process(delta: float) -> void:
 				coyote_time = 0.1
 		
 		States.DAMAGE:
-			animation_player.play("die")
+			is_invincible = true
+			animation_player.play("hit")
 		
 		States.DEATH:
+			collision_shape.disabled = true
+			if not game_over:
+				velocity.x = 400 * sign(anchor.scale.x)
+				velocity.y = -800
+			apply_gravity(delta)
+			move_and_slide()
 			animation_player.play("die")
+			game_over = true
 
 
 func take_damage() -> void:
+	if is_invincible:
+		return
 	SignalBus.player_health -= 1
+	#position.x += knockback_amount * sign(anchor.scale.x)
+	
 
 
 func calculate_max_height() -> void:
-	var current_height = abs(global_position.y - player_start_y_position)
-	if current_height > max_player_height:
-		max_player_height = current_height
-		SignalBus.distance_climbed = max_player_height
+	if not game_over:
+		var current_height = abs(global_position.y - player_start_y_position)
+		if current_height > max_player_height:
+			max_player_height = current_height
+			SignalBus.distance_climbed = max_player_height
 
 
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "throw":
 		throw_animation_playing = false
-	elif anim_name == "die":
+	elif anim_name == "hit":
 		state = States.MOVE
+		effects_animation_player.play("invincible")
+	elif anim_name == "die":
+		print("GAME OVER")
+
+
+func _on_effects_animation_finished(anim_name: String) -> void:
+	if anim_name == "invincible":
+		is_invincible = false
 
 
 func throw_projectile() -> void:
