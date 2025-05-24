@@ -10,6 +10,6 @@
 
 [node name="LevelGenerator" type="Node2D"]
 script = ExtResource("1_h8ut2")
-platforms_array = Array[PackedScene]([ExtResource("2_y1nhe"), ExtResource("3_e4l22"), ExtResource("4_3eqg6"), ExtResource("5_47ygi"), ExtResource("2_y1nhe"), ExtResource("2_y1nhe"), ExtResource("6_bbti2"), ExtResource("7_mlv22")])
+platforms_array = Array[PackedScene]([ExtResource("2_y1nhe"), ExtResource("3_e4l22"), ExtResource("4_3eqg6"), ExtResource("5_47ygi"), ExtResource("2_y1nhe"), ExtResource("2_y1nhe"), ExtResource("6_bbti2"), ExtResource("7_mlv22"), ExtResource("2_y1nhe"), ExtResource("2_y1nhe"), ExtResource("2_y1nhe")])
 
 [node name="PlatformParent" type="Node2D" parent="."]
