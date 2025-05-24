@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 
-enum States { MOVE, DEATH }
+enum States { MOVE, DAMAGE, DEATH }
 
 @export var state = States.MOVE
 
@@ -25,9 +25,12 @@ var throw_animation_playing: bool = false
 var player_start_y_position: int
 var max_player_height: int = 0
 
+#var player_death_position: Vector2
+
 @onready var anchor: Node2D = $Anchor
 @onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var projectile = preload("res://Scenes/player_projectile.tscn")
 
 
@@ -107,8 +110,11 @@ func _physics_process(delta: float) -> void:
 			if was_on_floor and not is_on_floor() and velocity.y >= 0:
 				coyote_time = 0.1
 		
+		States.DAMAGE:
+			animation_player.play("die")
+		
 		States.DEATH:
-			print("You Died!")
+			animation_player.play("die")
 
 
 func take_damage() -> void:
@@ -125,7 +131,8 @@ func calculate_max_height() -> void:
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "throw":
 		throw_animation_playing = false
-		#state = States.MOVE
+	elif anim_name == "die":
+		state = States.MOVE
 
 
 func throw_projectile() -> void:

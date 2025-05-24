@@ -3,6 +3,7 @@ extends Node
 
 
 signal player_health_updated(health: int)
+signal player_damage
 signal game_over
 signal projectile_count_updated(count: int)
 signal distance_updated(distance: int)
@@ -11,9 +12,9 @@ signal distance_updated(distance: int)
 var player_health: int = 3:
 	set(value):
 		player_health = value
-		if player_health > 0:
-			player_health_updated.emit(player_health)
-		else:
+		player_health_updated.emit(player_health)
+		player_damage.emit()
+		if player_health <= 0:
 			game_over.emit()
 var projectile_count: int = 0:
 	set(value):
