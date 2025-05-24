@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 signal game_over
+signal player_crunched
 
 enum States { MOVE, DAMAGE, DEATH }
 
@@ -62,6 +63,7 @@ func _process(delta: float) -> void:
 	# Test if ring boundary has closed in for game over state
 	if left_ray_cast.is_colliding() and right_ray_cast.is_colliding():
 		state = States.DEATH
+		player_crunched.emit()
 
 
 func _physics_process(delta: float) -> void:

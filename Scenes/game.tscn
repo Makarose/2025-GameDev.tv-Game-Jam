@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="4_rakfa"]
 [ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="5_55roh"]
 [ext_resource type="PackedScene" uid="uid://c21bbbmd0n12n" path="res://Scenes/level_generator.tscn" id="7_pa1g6"]
-[ext_resource type="Texture2D" uid="uid://cgc3wsxwn2twy" path="res://assets/green_vignette.png" id="10_6gtr0"]
+[ext_resource type="Texture2D" uid="uid://duy81f4rjrllf" path="res://assets/green_vignette.png" id="10_6gtr0"]
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="14_bthex"]
 [ext_resource type="PackedScene" uid="uid://do6rvt2en8bg4" path="res://Scenes/foreground.tscn" id="15_4jp4s"]
 [ext_resource type="PackedScene" uid="uid://co1hydikp5oom" path="res://Scenes/background.tscn" id="16_jxsf0"]
