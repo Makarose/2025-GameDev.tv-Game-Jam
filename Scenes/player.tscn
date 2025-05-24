@@ -658,6 +658,16 @@ hframes = 13
 [node name="ProjectileSpawnPoint" type="Marker2D" parent="Anchor"]
 position = Vector2(-68, -133)
 
+[node name="LeftRayCast" type="RayCast2D" parent="."]
+position = Vector2(0, -111)
+target_position = Vector2(-150, 0)
+collision_mask = 4
+
+[node name="RightRayCast" type="RayCast2D" parent="."]
+position = Vector2(0, -111)
+target_position = Vector2(150, 0)
+collision_mask = 4
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, -89)
 shape = SubResource("CapsuleShape2D_gapsy")

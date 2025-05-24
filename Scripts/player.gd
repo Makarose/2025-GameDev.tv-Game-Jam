@@ -1,6 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
+signal game_over
 
 enum States { MOVE, DAMAGE, DEATH }
 
@@ -27,7 +28,7 @@ var player_start_y_position: int
 var max_player_height: int = 0
 
 var is_invincible: bool = false
-var game_over: bool = false
+var is_dead: bool = false
 
 @onready var anchor: Node2D = $Anchor
 @onready var projectile_spawn_point: Marker2D = $Anchor/ProjectileSpawnPoint
@@ -122,13 +123,14 @@ func _physics_process(delta: float) -> void:
 		
 		States.DEATH:
 			collision_shape.disabled = true
-			if not game_over:
+			if not is_dead:
 				velocity.x = 400 * sign(anchor.scale.x)
 				velocity.y = -800
+				is_dead = true
 			apply_gravity(delta)
 			move_and_slide()
 			animation_player.play("die")
-			game_over = true
+			await get_tree().create_timer(2.0).timeout
 
 
 func take_damage() -> void:
@@ -136,11 +138,10 @@ func take_damage() -> void:
 		return
 	SignalBus.player_health -= 1
 	#position.x += knockback_amount * sign(anchor.scale.x)
-	
 
 
 func calculate_max_height() -> void:
-	if not game_over:
+	if not is_dead:
 		var current_height = abs(global_position.y - player_start_y_position)
 		if current_height > max_player_height:
 			max_player_height = current_height
@@ -154,7 +155,7 @@ func _on_animation_finished(anim_name: String) -> void:
 		state = States.MOVE
 		effects_animation_player.play("invincible")
 	elif anim_name == "die":
-		print("GAME OVER")
+		game_over.emit()
 
 
 func _on_effects_animation_finished(anim_name: String) -> void:

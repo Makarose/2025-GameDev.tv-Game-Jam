@@ -12,16 +12,18 @@ func _ready() -> void:
 	level_generator.setup(player)
 	
 	SignalBus.player_damage.connect(_on_player_damage)
-	SignalBus.game_over.connect(_on_game_over)
-
-
-func _process(delta: float) -> void:
-	pass
+	SignalBus.player_death.connect(_on_player_death)
+	
+	player.game_over.connect(_on_game_over)
 
 
 func _on_player_damage() -> void:
 	player.state = States.DAMAGE
 
 
-func _on_game_over() -> void:
+func _on_player_death() -> void:
 	player.state = States.DEATH
+
+
+func _on_game_over() -> void:
+	print("GAME OVER")

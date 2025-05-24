@@ -110,6 +110,9 @@ scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_lf18l")
+can_contract = false
+contract_rate = 0.1
+contract_acceleration = 0.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="RingBoundary"]
