@@ -1,4 +1,36 @@
-[gd_scene format=3 uid="uid://biomhpvr1hg1h"]
+[gd_scene load_steps=13 format=3 uid="uid://biomhpvr1hg1h"]
+
+[ext_resource type="Script" path="res://Scripts/instructions.gd" id="1_cg73y"]
+[ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="2_smgb4"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_qy6bq"]
+[ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="4_dba11"]
+[ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="5_sh01l"]
+[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_ghlq7"]
+[ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="7_2sbj7"]
+[ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_3ixjr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0j2a3"]
+font = ExtResource("3_qy6bq")
+font_size = 160
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eiodc"]
+font = ExtResource("3_qy6bq")
+font_size = 160
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3mgpu"]
+font = ExtResource("3_qy6bq")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d825v"]
+font = ExtResource("3_qy6bq")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -7,10 +39,146 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cg73y")
+metadata/_edit_horizontal_guides_ = [1056.0]
 
-[node name="Label" type="Label" parent="."]
+[node name="AquaGradientLighter" type="Sprite2D" parent="."]
+position = Vector2(968, 528)
+scale = Vector2(1.0309, 1.08)
+texture = ExtResource("2_smgb4")
+
+[node name="Black Title" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 16.0
+offset_right = 1546.0
+offset_bottom = 199.0
+text = "Instructions
+"
+label_settings = SubResource("LabelSettings_0j2a3")
+horizontal_alignment = 1
+
+[node name="White Title" type="Label" parent="."]
+offset_left = 397.853
+offset_top = 22.233
+offset_right = 1559.85
+offset_bottom = 205.233
+text = "Instructions
+"
+label_settings = SubResource("LabelSettings_eiodc")
+horizontal_alignment = 1
+
+[node name="TextureButton (Play)" type="TextureButton" parent="."]
+offset_left = 768.0
+offset_top = 888.0
+offset_right = 983.0
+offset_bottom = 1103.0
+scale = Vector2(0.612001, 0.634793)
+texture_normal = ExtResource("4_dba11")
+texture_pressed = ExtResource("5_sh01l")
+texture_hover = ExtResource("6_ghlq7")
+
+[node name="Play" type="Label" parent="TextureButton (Play)"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-scale = Vector2(16.216, 11.549)
-text = "INSTRUCTIONS"
+offset_left = 245.098
+offset_top = 58.2867
+offset_right = 651.098
+offset_bottom = 274.287
+scale = Vector2(1.68317, 1.34724)
+text = "Play
+
+
+"
+label_settings = SubResource("LabelSettings_3mgpu")
+
+[node name="TextureButton (Back)" type="TextureButton" parent="."]
+offset_left = 144.0
+offset_top = 888.0
+offset_right = 359.0
+offset_bottom = 1103.0
+scale = Vector2(0.612001, 0.634793)
+texture_normal = ExtResource("4_dba11")
+texture_pressed = ExtResource("5_sh01l")
+texture_hover = ExtResource("6_ghlq7")
+flip_h = true
+
+[node name="Back" type="Label" parent="TextureButton (Back)"]
+layout_mode = 0
+offset_left = 245.098
+offset_top = 58.2867
+offset_right = 651.098
+offset_bottom = 274.287
+scale = Vector2(1.68317, 1.34724)
+text = "Back
+
+
+
+"
+label_settings = SubResource("LabelSettings_3mgpu")
+
+[node name="TextureButton (Quit)" type="TextureButton" parent="."]
+offset_left = 1336.0
+offset_top = 888.0
+offset_right = 1551.0
+offset_bottom = 1103.0
+scale = Vector2(0.612001, 0.634793)
+texture_normal = ExtResource("7_2sbj7")
+texture_pressed = ExtResource("5_sh01l")
+texture_hover = ExtResource("8_3ixjr")
+
+[node name="Quit" type="Label" parent="TextureButton (Quit)"]
+layout_mode = 0
+offset_left = 276.143
+offset_top = 48.8348
+offset_right = 682.143
+offset_bottom = 191.835
+scale = Vector2(1.68317, 1.34724)
+text = "Quit
+
+"
+label_settings = SubResource("LabelSettings_d825v")
+
+[node name="Jump" type="Label" parent="."]
+offset_left = 792.0
+offset_top = 272.0
+offset_right = 1198.0
+offset_bottom = 425.0
+scale = Vector2(1.68317, 1.34724)
+text = "Jump
+
+"
+label_settings = SubResource("LabelSettings_d825v")
+
+[node name="Attack" type="Label" parent="."]
+offset_left = 1488.0
+offset_top = 248.0
+offset_right = 1894.0
+offset_bottom = 479.0
+scale = Vector2(1.68317, 1.34724)
+text = "Attack
+
+
+"
+label_settings = SubResource("LabelSettings_d825v")
+
+[node name="Pause" type="Label" parent="."]
+offset_left = 72.0001
+offset_top = 728.0
+offset_right = 478.0
+offset_bottom = 959.0
+scale = Vector2(1.68317, 1.34724)
+text = "Pause"
+label_settings = SubResource("LabelSettings_d825v")
+
+[node name="Walk" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 272.0
+offset_right = 510.0
+offset_bottom = 503.0
+scale = Vector2(1.68317, 1.34724)
+text = "Walk
+"
+label_settings = SubResource("LabelSettings_d825v")
+
+[connection signal="pressed" from="TextureButton (Play)" to="." method="_on_texture_button_play_pressed"]
+[connection signal="pressed" from="TextureButton (Back)" to="." method="_on_texture_button_back_pressed"]
+[connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]
