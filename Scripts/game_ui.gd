@@ -7,6 +7,9 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	SignalBus.player_health_updated.connect(func(new_player_health):
+		_on_player_health_updated(new_player_health)
+		)
 	SignalBus.projectile_count_updated.connect(func(new_projectile_count):
 		_on_projectile_count_updated(new_projectile_count)
 		)
@@ -18,6 +21,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_player_health_updated(new_player_health) -> void:
+	health_label.text = str(new_player_health)
 
 
 func _on_projectile_count_updated(new_projectile_count) -> void:

@@ -39,6 +39,7 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_yrajc")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
+visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -132,7 +133,6 @@ shape = SubResource("RectangleShape2D_lr1ly")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D"]
 stream = ExtResource("14_bthex")
-autoplay = true
 
 [node name="LevelGenerator" parent="." instance=ExtResource("7_pa1g6")]
 

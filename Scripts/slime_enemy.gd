@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		print("Slime Enemy Hit Player")
+		body.take_damage()

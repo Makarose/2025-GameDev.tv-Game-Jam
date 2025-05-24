@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 
-enum States { MOVE, ATTACK, DEATH }
+enum States { MOVE, DEATH }
 
 @export var state = States.MOVE
 
@@ -106,21 +106,13 @@ func _physics_process(delta: float) -> void:
 			# Enable coyote jump
 			if was_on_floor and not is_on_floor() and velocity.y >= 0:
 				coyote_time = 0.1
-			
-		States.ATTACK:
-			pass
-			#if can_throw:
-				#can_throw = false
-				#throw_projectile(anchor.scale.x)
-				#animation_player.play("throw")
-				#
-				#apply_gravity(delta)
-				#apply_friction(delta)
-				#
-				#move_and_slide()
 		
 		States.DEATH:
-			pass
+			print("You Died!")
+
+
+func take_damage() -> void:
+	SignalBus.player_health -= 1
 
 
 func calculate_max_height() -> void:

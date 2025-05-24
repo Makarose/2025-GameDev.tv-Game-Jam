@@ -87,6 +87,7 @@ texture_pressed = ExtResource("7_dgtvm")
 texture_hover = ExtResource("7_n1riy")
 
 [node name="Replay" type="Label" parent="TextureButton (Replay)"]
+layout_mode = 0
 offset_left = 276.143
 offset_top = 48.8348
 offset_right = 682.143
@@ -98,6 +99,7 @@ text = "Replay
 label_settings = SubResource("LabelSettings_wehpi")
 
 [node name="TextureButton (Quit)" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 764.314
 offset_top = 774.132
 offset_right = 979.314
