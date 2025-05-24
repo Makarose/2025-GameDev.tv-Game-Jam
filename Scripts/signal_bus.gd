@@ -24,7 +24,11 @@ var projectile_count: int = 0:
 var distance_climbed: int = 0:
 	set(value):
 		distance_climbed = convert_distance_to_feet(value)
+		if distance_climbed > best_distance:
+			best_distance = distance_climbed
 		distance_updated.emit(distance_climbed)
+
+var best_distance: int = 0
 
 
 func convert_distance_to_feet(pixel_distance: int) -> int:

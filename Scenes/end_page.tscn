@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://rna4fbhwckih"]
+[gd_scene load_steps=15 format=3 uid="uid://rna4fbhwckih"]
 
 [ext_resource type="Script" path="res://Scripts/end_page.gd" id="1_7vj3x"]
 [ext_resource type="Texture2D" uid="uid://dujq4xs6wxr3d" path="res://Sprites/Banana Man Animations/die (single frame).png" id="2_flymk"]
 [ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="3_rgvts"]
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_u8hgx"]
+[ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="4_vr7sv"]
 [ext_resource type="Texture2D" uid="uid://b3niqi0oobfqo" path="res://Jungle Pack UI/PNG/btn/restart.png" id="5_ehdgk"]
 [ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="6_p500g"]
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="7_dgtvm"]
@@ -68,6 +69,40 @@ offset_bottom = -272.891
 text = "Game Over
 "
 label_settings = SubResource("LabelSettings_qewg4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 220
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 19
+
+[node name="ThisHeight" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vr7sv")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 80
+text = "Height Reached = 0'"
+horizontal_alignment = 2
+
+[node name="BestHeight" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vr7sv")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 80
+text = "Best Height Ever = 0'"
+horizontal_alignment = 2
 
 [node name="Die(singleFrame)" type="Sprite2D" parent="."]
 position = Vector2(1512, 496)

@@ -2,15 +2,20 @@ extends Node2D
 
 enum States { MOVE, DAMAGE, DEATH }
 
+@export var end_screen: PackedScene
+
 @onready var camera_2d: Camera = $Camera2D
 @onready var level_generator: Node2D = $LevelGenerator
 @onready var player: Player = $Player
 @onready var ring_boundary: RingBoundary = $RingBoundary
+@onready var pause_screen: CanvasLayer = $PauseScreen
 
 
 func _ready() -> void:
 	camera_2d.setup_camera(player)
 	level_generator.setup(player)
+	
+	SignalBus.distance_climbed = 0
 	
 	SignalBus.player_damage.connect(_on_player_damage)
 	SignalBus.player_death.connect(_on_player_death)
@@ -32,4 +37,4 @@ func _on_player_crunched() -> void:
 
 
 func _on_game_over() -> void:
-	print("GAME OVER")
+	get_tree().change_scene_to_packed(end_screen)

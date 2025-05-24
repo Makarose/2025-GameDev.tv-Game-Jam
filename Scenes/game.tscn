@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=24 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dorvvcyiy68t3" path="res://assets/graybox.png" id="2_loit0"]
 [ext_resource type="Script" path="res://Scripts/game_ui.gd" id="2_ltyt3"]
 [ext_resource type="Script" path="res://Scripts/ring_reference_marker.gd" id="2_r6be6"]
+[ext_resource type="PackedScene" uid="uid://rna4fbhwckih" path="res://Scenes/end_page.tscn" id="2_tfe5t"]
 [ext_resource type="Script" path="res://Scripts/ring_boundary.gd" id="4_lf18l"]
 [ext_resource type="Texture2D" uid="uid://dqu7ulmhdh6vc" path="res://Sprites/Oranges and Bananas/banana.png" id="4_rakfa"]
 [ext_resource type="Theme" uid="uid://b0u0rq7ucwsr8" path="res://assets/default_custom_theme.tres" id="5_55roh"]
@@ -16,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="14_bthex"]
 [ext_resource type="PackedScene" uid="uid://do6rvt2en8bg4" path="res://Scenes/foreground.tscn" id="15_4jp4s"]
 [ext_resource type="PackedScene" uid="uid://co1hydikp5oom" path="res://Scenes/background.tscn" id="16_jxsf0"]
+[ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="16_u2ref"]
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="17_mmxjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr1ly"]
@@ -37,6 +39,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yrajc")
+end_screen = ExtResource("2_tfe5t")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
 visible = false
@@ -152,7 +155,9 @@ tile_map_data = PackedByteArray("AAAAAEMAAAAAAAAAAAABAEMAAAAAAAAAAAACAEMAAAAAAAA
 tile_set = SubResource("TileSet_rbbwr")
 
 [node name="PauseScreen" type="CanvasLayer" parent="."]
+process_mode = 3
 visible = false
+script = ExtResource("16_u2ref")
 
 [node name="ColorRect" type="ColorRect" parent="PauseScreen"]
 offset_left = -51.0
