@@ -110,7 +110,6 @@ scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_lf18l")
-can_contract = false
 contract_rate = 0.1
 contract_acceleration = 0.0
 metadata/_edit_group_ = true
@@ -140,6 +139,7 @@ stream = ExtResource("14_bthex")
 [node name="LevelGenerator" parent="." instance=ExtResource("7_pa1g6")]
 
 [node name="Player" parent="." instance=ExtResource("1_bbx0x")]
+z_index = 11
 position = Vector2(1008, 982)
 max_speed = 300
 up_gravity = 2000

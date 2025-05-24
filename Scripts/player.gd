@@ -36,6 +36,8 @@ var is_dead: bool = false
 @onready var effects_animation_player: AnimationPlayer = $EffectsAnimationPlayer
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var projectile = preload("res://Scenes/player_projectile.tscn")
+@onready var left_ray_cast: RayCast2D = $LeftRayCast
+@onready var right_ray_cast: RayCast2D = $RightRayCast
 
 
 func _ready() -> void:
@@ -56,6 +58,10 @@ func _process(delta: float) -> void:
 		global_position.x = viewport_size.x + 16
 	elif global_position.x >= viewport_size.x + 16:
 		global_position.x = -16
+	
+	# Test if ring boundary has closed in for game over state
+	if left_ray_cast.is_colliding() and right_ray_cast.is_colliding():
+		state = States.DEATH
 
 
 func _physics_process(delta: float) -> void:
