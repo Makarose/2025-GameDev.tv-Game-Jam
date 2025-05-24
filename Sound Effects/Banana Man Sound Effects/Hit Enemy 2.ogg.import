@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcg61r4too0xe"
+path="res://.godot/imported/Hit Enemy 2.ogg-42fb5366ed92e2f78138aa3f3917fb8c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Banana Man Sound Effects/Hit Enemy 2.ogg"
+dest_files=["res://.godot/imported/Hit Enemy 2.ogg-42fb5366ed92e2f78138aa3f3917fb8c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

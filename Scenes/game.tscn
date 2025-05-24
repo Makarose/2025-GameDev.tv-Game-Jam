@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=22 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="14_bthex"]
 [ext_resource type="PackedScene" uid="uid://do6rvt2en8bg4" path="res://Scenes/foreground.tscn" id="15_4jp4s"]
 [ext_resource type="PackedScene" uid="uid://co1hydikp5oom" path="res://Scenes/background.tscn" id="16_jxsf0"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="17_mmxjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr1ly"]
 
@@ -28,11 +29,16 @@ texture = ExtResource("2_loit0")
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_p6s8q")
 
+[sub_resource type="LabelSettings" id="LabelSettings_dccxi"]
+font = ExtResource("17_mmxjc")
+font_size = 160
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_yrajc")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
-visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -143,5 +149,27 @@ tile_map_data = PackedByteArray("AAAAAEMAAAAAAAAAAAABAEMAAAAAAAAAAAACAEMAAAAAAAA
 tile_set = SubResource("TileSet_rbbwr")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("16_jxsf0")]
+visible = false
+
+[node name="PauseScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PauseScreen"]
+offset_left = -51.0
+offset_top = -47.0
+offset_right = -11.0
+offset_bottom = -7.0
+scale = Vector2(50.9594, 30.423)
+color = Color(0.0779571, 0.232452, 0.267897, 0.560784)
+
+[node name="White Title" type="Label" parent="PauseScreen"]
+offset_left = 408.0
+offset_top = 328.0
+offset_right = 1570.0
+offset_bottom = 511.0
+scale = Vector2(1.92544, 2.02215)
+text = "Paused
+"
+label_settings = SubResource("LabelSettings_dccxi")
 
 [connection signal="body_entered" from="Camera2D/KillZone" to="Camera2D" method="_on_kill_zone_body_entered"]

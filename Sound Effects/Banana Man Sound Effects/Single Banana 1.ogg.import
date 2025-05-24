@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blweoifv3lc5p"
+path="res://.godot/imported/Single Banana 1.ogg-d1e860e07291efe91f1ab61e37ecd832.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Banana Man Sound Effects/Single Banana 1.ogg"
+dest_files=["res://.godot/imported/Single Banana 1.ogg-d1e860e07291efe91f1ab61e37ecd832.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

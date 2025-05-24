@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3ufm66qqcxh"
-path="res://.godot/imported/misic.png-38816729f908dc55440b9ba1d4f1578a.ctex"
+uid="uid://dwt2br2gbes1f"
+path="res://.godot/imported/000.png-40672691d5cb1e0b73637d8d9029d960.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jungle Pack UI/PNG/btn/misic.png"
-dest_files=["res://.godot/imported/misic.png-38816729f908dc55440b9ba1d4f1578a.ctex"]
+source_file="res://Sprites/Purple Slime Enemy/000.png"
+dest_files=["res://.godot/imported/000.png-40672691d5cb1e0b73637d8d9029d960.ctex"]
 
 [params]
 

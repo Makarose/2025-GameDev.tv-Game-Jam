@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://do06jbx7gwbrl"
+path="res://.godot/imported/Lose Life Single 2.ogg-36c11a419bd013da9684244f812b3718.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Banana Man Sound Effects/Lose Life Single 2.ogg"
+dest_files=["res://.godot/imported/Lose Life Single 2.ogg-36c11a419bd013da9684244f812b3718.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

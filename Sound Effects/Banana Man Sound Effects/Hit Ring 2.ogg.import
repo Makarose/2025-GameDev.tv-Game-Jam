@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct6158puq76pa"
+path="res://.godot/imported/Hit Ring 2.ogg-85e68611134e94b8d4251ccc641ef198.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Banana Man Sound Effects/Hit Ring 2.ogg"
+dest_files=["res://.godot/imported/Hit Ring 2.ogg-85e68611134e94b8d4251ccc641ef198.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

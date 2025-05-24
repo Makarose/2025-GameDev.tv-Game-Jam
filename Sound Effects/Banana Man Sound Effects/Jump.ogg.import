@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://brbjcabmgabiw"
+path="res://.godot/imported/Jump.ogg-c33050023d6861110ec0081024e34ccc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Banana Man Sound Effects/Jump.ogg"
+dest_files=["res://.godot/imported/Jump.ogg-c33050023d6861110ec0081024e34ccc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

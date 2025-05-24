@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://rna4fbhwckih"]
+
+[ext_resource type="Script" path="res://Scripts/end_page.gd" id="1_7vj3x"]
+[ext_resource type="Texture2D" uid="uid://dujq4xs6wxr3d" path="res://Sprites/Banana Man Animations/die (single frame).png" id="2_flymk"]
+[ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="3_rgvts"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_u8hgx"]
+[ext_resource type="Texture2D" uid="uid://b3niqi0oobfqo" path="res://Jungle Pack UI/PNG/btn/restart.png" id="5_ehdgk"]
+[ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="6_p500g"]
+[ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="7_dgtvm"]
+[ext_resource type="Texture2D" uid="uid://cuio3vr7l1gee" path="res://Jungle Pack UI/PNG/btn/hover_replay.png" id="7_n1riy"]
+[ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_82btg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cssc"]
+font = ExtResource("3_u8hgx")
+font_size = 160
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qewg4"]
+font = ExtResource("3_u8hgx")
+font_size = 160
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wehpi"]
+font = ExtResource("3_u8hgx")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxw1e"]
+font = ExtResource("3_u8hgx")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="EndPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.01865, 1.06442)
+script = ExtResource("1_7vj3x")
+metadata/_edit_vertical_guides_ = [256.0, 1920.0]
+metadata/_edit_horizontal_guides_ = [1080.0]
+
+[node name="AquaGradientLighter" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960, 520)
+scale = Vector2(1, 0.962602)
+texture = ExtResource("3_rgvts")
+metadata/_edit_lock_ = true
+
+[node name="Black Title" type="Label" parent="AquaGradientLighter"]
+offset_left = -771.514
+offset_top = -462.124
+offset_right = 390.486
+offset_bottom = -279.124
+text = "Game Over
+"
+label_settings = SubResource("LabelSettings_7cssc")
+
+[node name="White Title" type="Label" parent="AquaGradientLighter"]
+offset_left = -757.661
+offset_top = -455.891
+offset_right = 404.339
+offset_bottom = -272.891
+text = "Game Over
+"
+label_settings = SubResource("LabelSettings_qewg4")
+
+[node name="Die(singleFrame)" type="Sprite2D" parent="."]
+position = Vector2(1512, 496)
+rotation = -0.203585
+texture = ExtResource("2_flymk")
+
+[node name="TextureButton (Replay)" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 251.314
+offset_top = 778.132
+offset_right = 466.314
+offset_bottom = 993.132
+scale = Vector2(0.61, 0.61)
+texture_normal = ExtResource("5_ehdgk")
+texture_pressed = ExtResource("7_dgtvm")
+texture_hover = ExtResource("7_n1riy")
+
+[node name="Replay" type="Label" parent="TextureButton (Replay)"]
+offset_left = 276.143
+offset_top = 48.8348
+offset_right = 682.143
+offset_bottom = 191.835
+scale = Vector2(1.68317, 1.34724)
+text = "Replay
+
+"
+label_settings = SubResource("LabelSettings_wehpi")
+
+[node name="TextureButton (Quit)" type="TextureButton" parent="."]
+offset_left = 764.314
+offset_top = 774.132
+offset_right = 979.314
+offset_bottom = 989.132
+scale = Vector2(0.612001, 0.634793)
+texture_normal = ExtResource("6_p500g")
+texture_pressed = ExtResource("7_dgtvm")
+texture_hover = ExtResource("8_82btg")
+
+[node name="Quit" type="Label" parent="TextureButton (Quit)"]
+layout_mode = 0
+offset_left = 276.143
+offset_top = 48.8348
+offset_right = 682.143
+offset_bottom = 191.835
+scale = Vector2(1.68317, 1.34724)
+text = "Quit
+
+"
+label_settings = SubResource("LabelSettings_xxw1e")
+
+[connection signal="pressed" from="TextureButton (Replay)" to="." method="_on_texture_button_replay_pressed"]
+[connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]

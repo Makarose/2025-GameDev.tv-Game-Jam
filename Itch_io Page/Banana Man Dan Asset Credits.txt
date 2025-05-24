@@ -1,8 +1,12 @@
-Music
+Music & Sound
 
 asset name: Jungle
 credit: Michael Robinson Homingstar
 website: https://opengameart.org/content/jungle
+
+asset name: Sound effects Pack 2
+credit: phoenix1291
+website: https://opengameart.org/content/sound-effects-pack-2
 
 
 
@@ -16,6 +20,11 @@ asset name: Customizable Stickman Hypercasual
 credit: Thcyrax
 website: https://thcyrax.itch.io/customizable-stickman-hypercasual
 
+asset name: Jungle Game UI
+credit: Baj123
+website: https://baj123.itch.io/jungle-game-ui
+
+
 
 
 Font
@@ -23,3 +32,5 @@ Font
 asset name: Free Cheese Font
 credit: GGBotNet
 website: https://ggbot.itch.io/free-cheese-font
+
+
