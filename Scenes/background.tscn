@@ -19,24 +19,31 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(0, 1080)
-script = ExtResource("3_fsltn")
-scrolling_speed = Vector2(0, -500)
-
-[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer1"]
-scale = Vector2(1.05, 0.982)
-texture = ExtResource("3_17p4b")
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-position = Vector2(291, 0)
+position = Vector2(1648, 0)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
 script = ExtResource("5_yt7e3")
-scrolling_speed = Vector2(0, -500)
+scrolling_speed = Vector2(0, -400)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer1"]
+modulate = Color(1, 1, 1, 0.32549)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+flip_h = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(288, 0)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("5_yt7e3")
+scrolling_speed = Vector2(0, -400)
 
 [node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(532, 0)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
@@ -44,62 +51,189 @@ flip_h = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 position = Vector2(533, 0)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
 script = ExtResource("6_bj0m3")
 scrolling_speed = Vector2(0, -500)
 
 [node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(620, 0)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
-position = Vector2(817, 0)
+position = Vector2(816, 0)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
 script = ExtResource("7_kxq6i")
-scrolling_speed = Vector2(0, -500)
+scrolling_speed = Vector2(0, -400)
 
 [node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer4"]
+modulate = Color(1, 1, 1, 0.32549)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
-flip_h = true
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
-position = Vector2(1084, 0)
+position = Vector2(992, 0)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
 script = ExtResource("8_je2vp")
 scrolling_speed = Vector2(0, -500)
 
 [node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer5"]
+modulate = Color(1, 1, 1, 0.32549)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
-position = Vector2(1392, 0)
+position = Vector2(1128, 0)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
 script = ExtResource("9_dhrf1")
-scrolling_speed = Vector2(0, -500)
+scrolling_speed = Vector2(0, -400)
 
 [node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer6"]
+modulate = Color(1, 1, 1, 0.32549)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+position = Vector2(1336, 0)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("10_afbic")
+scrolling_speed = Vector2(0, -700)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer7"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(96, 0)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="."]
+position = Vector2(288, 0)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("3_fsltn")
+scrolling_speed = Vector2(0, -800)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer8"]
+modulate = Color(1, 1, 1, 0.32549)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+
+[node name="AquaStreak2" type="Sprite2D" parent="ParallaxLayer8"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(896, 0)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="."]
+position = Vector2(419, 0)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("5_yt7e3")
+scrolling_speed = Vector2(0, -700)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer9"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(820, 0)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
 flip_h = true
 
-[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
-position = Vector2(1600, 0)
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="."]
+position = Vector2(744, 8)
+scale = Vector2(0.25, 1)
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(0, 1080)
-script = ExtResource("10_afbic")
-scrolling_speed = Vector2(0, -500)
+script = ExtResource("6_bj0m3")
+scrolling_speed = Vector2(0, -800)
 
-[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer7"]
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer10"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(128, -8)
 scale = Vector2(1.05, 0.982)
 texture = ExtResource("3_17p4b")
 centered = false
+flip_h = true
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="."]
+position = Vector2(945, 0)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("7_kxq6i")
+scrolling_speed = Vector2(0, -700)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer11"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(-132, 0)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+flip_h = true
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="."]
+position = Vector2(1128, -8)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("8_je2vp")
+scrolling_speed = Vector2(0, -800)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer12"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(-112, 0)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+flip_h = true
+
+[node name="ParallaxLayer13" type="ParallaxLayer" parent="."]
+position = Vector2(1280, 16)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("9_dhrf1")
+scrolling_speed = Vector2(0, -700)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer13"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(-64, 0)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+flip_h = true
+
+[node name="ParallaxLayer14" type="ParallaxLayer" parent="."]
+position = Vector2(1472, 32)
+scale = Vector2(0.25, 1)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(0, 1080)
+script = ExtResource("10_afbic")
+scrolling_speed = Vector2(0, -800)
+
+[node name="AquaStreak" type="Sprite2D" parent="ParallaxLayer14"]
+modulate = Color(1, 1, 1, 0.32549)
+position = Vector2(0, -32)
+scale = Vector2(1.05, 0.982)
+texture = ExtResource("3_17p4b")
+centered = false
+flip_h = true
