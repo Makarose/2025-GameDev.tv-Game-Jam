@@ -8,55 +8,38 @@
 
 [node name="006" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(1752, -33)
-rotation = 3.79482
+position = Vector2(1883, -47.9999)
+rotation = 3.86276
 texture = ExtResource("1_b1qgv")
 
 [node name="012" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(1844, 1008)
+position = Vector2(1891, 1059)
 rotation = 5.57197
 texture = ExtResource("1_b1qgv")
 
 [node name="007" type="Sprite2D" parent="."]
 z_index = 4
-position = Vector2(206, 1056)
+position = Vector2(77.9999, 1096)
 rotation = 0.70084
 texture = ExtResource("1_b1qgv")
 flip_h = true
 
 [node name="002" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-209, 512)
-rotation = 0.223381
+position = Vector2(-185, 1015)
+rotation = -3.43971
 texture = ExtResource("3_hhb42")
-
-[node name="005" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(187, 1304)
-rotation = -4.42984
-texture = ExtResource("3_hhb42")
-
-[node name="010" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(1694, 1200)
-rotation = -2.07506
-texture = ExtResource("3_hhb42")
-flip_h = true
+flip_v = true
 
 [node name="003" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(2063, 443)
+position = Vector2(2113, 902)
+rotation = 0.306896
 texture = ExtResource("3_hhb42")
 
 [node name="011" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(426, -449)
-rotation = 1.72379
-texture = ExtResource("5_dxnou")
-
-[node name="008" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(1356, -378)
-rotation = 2.57283
+position = Vector2(429, -543)
+rotation = 1.68694
 texture = ExtResource("5_dxnou")

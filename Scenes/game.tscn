@@ -48,7 +48,6 @@ script = ExtResource("1_yrajc")
 end_screen = ExtResource("2_tfe5t")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
-visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")

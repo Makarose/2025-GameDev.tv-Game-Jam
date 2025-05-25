@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://c4nk7mout8bq6"]
 
 [ext_resource type="Script" path="res://Scripts/start_page.gd" id="1_tk5l4"]
-[ext_resource type="Texture2D" uid="uid://bjtypwej3twg5" path="res://Background Layers/itch_io thumbnail (no text).png" id="2_7eft8"]
+[ext_resource type="Texture2D" uid="uid://vgiixvxodpcu" path="res://Background Layers/main page (no text).png" id="2_7eft8"]
 [ext_resource type="Texture2D" uid="uid://be3ufm66qqcxh" path="res://Jungle Pack UI/PNG/btn/music.png" id="3_ue7lv"]
 [ext_resource type="Texture2D" uid="uid://b1ruo31m3aq4b" path="res://Jungle Pack UI/PNG/btn/hover_music_off.png" id="3_w78t6"]
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="4_tfuir"]
@@ -19,15 +19,15 @@
 [ext_resource type="Texture2D" uid="uid://clh4isf7tb54s" path="res://Jungle Pack UI/PNG/btn/hover_credit.png" id="17_7w1wh"]
 [ext_resource type="Texture2D" uid="uid://dccoxcsf0y36j" path="res://Jungle Pack UI/PNG/btn/sound.png" id="18_txobs"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_pyekf"]
+[sub_resource type="LabelSettings" id="LabelSettings_4defi"]
 font = ExtResource("5_oer7q")
 font_size = 160
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_15i01"]
+[sub_resource type="LabelSettings" id="LabelSettings_wy3ul"]
 font = ExtResource("5_oer7q")
 font_size = 160
-font_color = Color(0.94902, 0.788235, 0.0509804, 1)
+font_color = Color(0.956863, 0.792157, 0.0470588, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
@@ -53,35 +53,35 @@ normal_on = ExtResource("4_xusbh")
 hover_on = ExtResource("3_w78t6")
 metadata/_edit_horizontal_guides_ = [324.0, 515.0]
 
-[node name="ItchIoThumbnail(noText)" type="Sprite2D" parent="."]
-z_index = -1
+[node name="MainPage(noText)" type="Sprite2D" parent="."]
+position = Vector2(960, 536)
+scale = Vector2(1.0055, 1.02717)
 texture = ExtResource("2_7eft8")
-centered = false
 
-[node name="Black Title" type="Label" parent="ItchIoThumbnail(noText)"]
-offset_left = 94.0
-offset_top = 43.0
-offset_right = 1422.0
-offset_bottom = 226.0
+[node name="Black Title" type="Label" parent="MainPage(noText)"]
+offset_left = -891.095
+offset_top = -490.667
+offset_right = 436.905
+offset_bottom = -307.667
 text = "Banana Man Dan"
-label_settings = SubResource("LabelSettings_pyekf")
+label_settings = SubResource("LabelSettings_4defi")
 
-[node name="Yellow Title" type="Label" parent="ItchIoThumbnail(noText)"]
-offset_left = 100.0
-offset_top = 49.0
-offset_right = 1428.0
-offset_bottom = 232.0
+[node name="White Title" type="Label" parent="MainPage(noText)"]
+offset_left = -877.318
+offset_top = -484.599
+offset_right = 450.682
+offset_bottom = -301.599
 text = "Banana Man Dan"
-label_settings = SubResource("LabelSettings_15i01")
+label_settings = SubResource("LabelSettings_wy3ul")
 
 [node name="ToggleSound" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.239
 anchor_bottom = 0.137
-offset_left = 146.0
+offset_left = 152.0
 offset_top = 515.0
-offset_right = 270.12
+offset_right = 276.12
 offset_bottom = 582.04
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
@@ -201,9 +201,9 @@ label_settings = SubResource("LabelSettings_qjo7u")
 
 [node name="TextureButton (SFX)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 769.0
+offset_left = 775.0
 offset_top = 515.0
-offset_right = 984.0
+offset_right = 990.0
 offset_bottom = 730.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("18_txobs")

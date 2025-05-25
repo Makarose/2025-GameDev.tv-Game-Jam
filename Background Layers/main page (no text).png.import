@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjtypwej3twg5"
-path="res://.godot/imported/itch_io thumbnail (no text).png-caba701bd1974e16951e0cfa5407f4fb.ctex"
+uid="uid://vgiixvxodpcu"
+path="res://.godot/imported/main page (no text).png-1fdb6d56a3d5a38ef3d2dc8a2d26cac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background Layers/itch_io thumbnail (no text).png"
-dest_files=["res://.godot/imported/itch_io thumbnail (no text).png-caba701bd1974e16951e0cfa5407f4fb.ctex"]
+source_file="res://Background Layers/main page (no text).png"
+dest_files=["res://.godot/imported/main page (no text).png-1fdb6d56a3d5a38ef3d2dc8a2d26cac7.ctex"]
 
 [params]
 
