@@ -51,7 +51,7 @@ metadata/_edit_horizontal_guides_ = [1080.0]
 [node name="AquaGradientLighter" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(960, 520)
-scale = Vector2(1, 0.962602)
+scale = Vector2(1.00384, 0.962602)
 texture = ExtResource("3_rgvts")
 
 [node name="Black Title" type="Label" parent="AquaGradientLighter"]
@@ -117,7 +117,7 @@ offset_left = 251.314
 offset_top = 778.132
 offset_right = 466.314
 offset_bottom = 993.132
-scale = Vector2(0.61, 0.61)
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("5_ehdgk")
 texture_pressed = ExtResource("7_dgtvm")
 texture_hover = ExtResource("7_n1riy")
@@ -140,7 +140,7 @@ offset_left = 1342.95
 offset_top = 789.162
 offset_right = 1557.95
 offset_bottom = 1004.16
-scale = Vector2(0.612001, 0.634793)
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("6_p500g")
 texture_pressed = ExtResource("7_dgtvm")
 texture_hover = ExtResource("8_82btg")
@@ -163,7 +163,7 @@ offset_left = 848.181
 offset_top = 781.646
 offset_right = 1063.18
 offset_bottom = 996.646
-scale = Vector2(0.612001, 0.634793)
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("11_q5rse")
 texture_pressed = ExtResource("7_dgtvm")
 texture_hover = ExtResource("12_uwok2")

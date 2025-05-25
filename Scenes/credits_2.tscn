@@ -1,0 +1,152 @@
+[gd_scene load_steps=14 format=3 uid="uid://bbvn4fqkhf3dd"]
+
+[ext_resource type="Script" path="res://Scripts/credits_2.gd" id="1_laosp"]
+[ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="2_ujr5c"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_xon8s"]
+[ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="4_wtrvi"]
+[ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="5_tpmxr"]
+[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_dqaxf"]
+[ext_resource type="Texture2D" uid="uid://dijrqebvvvwj8" path="res://Jungle Pack UI/PNG/btn/menu.png" id="7_8ga7a"]
+[ext_resource type="Texture2D" uid="uid://dqe6q35522fpr" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="8_xiurv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_txaxa"]
+font = ExtResource("3_xon8s")
+font_size = 160
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dtkkr"]
+font = ExtResource("3_xon8s")
+font_size = 160
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xuxw2"]
+font = ExtResource("3_xon8s")
+font_size = 35
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r5bfe"]
+font = ExtResource("3_xon8s")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ld5tr"]
+font = ExtResource("3_xon8s")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_laosp")
+
+[node name="AquaGradientLighter" type="Sprite2D" parent="."]
+position = Vector2(968, 528)
+scale = Vector2(1.0309, 1.08)
+texture = ExtResource("2_ujr5c")
+
+[node name="White Title" type="MarginContainer" parent="."]
+z_index = 1
+offset_left = 424.247
+offset_top = 8.63998
+offset_right = 1516.25
+offset_bottom = 191.64
+
+[node name="White Title" type="Label" parent="White Title"]
+layout_mode = 2
+text = "Credits
+"
+label_settings = SubResource("LabelSettings_txaxa")
+horizontal_alignment = 1
+
+[node name="Black Title" type="MarginContainer" parent="."]
+offset_left = 416.0
+offset_right = 1508.0
+offset_bottom = 183.0
+
+[node name="Black Title" type="Label" parent="Black Title"]
+layout_mode = 2
+text = "Credits
+"
+label_settings = SubResource("LabelSettings_dtkkr")
+horizontal_alignment = 1
+
+[node name="Credits (sourced)" type="MarginContainer" parent="."]
+offset_left = 344.0
+offset_top = 184.0
+offset_right = 1755.0
+offset_bottom = 981.0
+
+[node name="Credits" type="Label" parent="Credits (sourced)"]
+layout_mode = 2
+text = "Music & Sound
+
+Creator: Michael Robinson Homingstar
+asset name: Jungle
+website: https://opengameart.org/content/jungle
+
+Creator: phoenix1291
+asset name: Sound effects Pack 2
+website: https://opengameart.org/content/sound-effects-pack-2
+
+
+Font
+
+Creator: GGBotNet
+asset name: Free Cheese Font
+website: https://ggbot.itch.io/free-cheese-font"
+label_settings = SubResource("LabelSettings_xuxw2")
+
+[node name="TextureButton (Back)" type="TextureButton" parent="."]
+offset_left = 56.0
+offset_top = 920.0
+offset_right = 1148.0
+offset_bottom = 1229.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_wtrvi")
+texture_pressed = ExtResource("5_tpmxr")
+texture_hover = ExtResource("6_dqaxf")
+flip_h = true
+
+[node name="Back" type="MarginContainer" parent="TextureButton (Back)"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = -57.0
+offset_right = 1340.0
+offset_bottom = 252.0
+
+[node name="Back" type="Label" parent="TextureButton (Back)/Back"]
+layout_mode = 2
+text = "Back
+"
+label_settings = SubResource("LabelSettings_r5bfe")
+
+[node name="TextureButton (Menu)" type="TextureButton" parent="."]
+offset_left = 1640.0
+offset_top = 904.0
+offset_right = 1855.0
+offset_bottom = 1119.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("7_8ga7a")
+texture_pressed = ExtResource("5_tpmxr")
+texture_hover = ExtResource("8_xiurv")
+
+[node name="Menu" type="MarginContainer" parent="TextureButton (Menu)"]
+offset_left = 248.0
+offset_top = -57.0
+offset_right = 1340.0
+offset_bottom = 252.0
+
+[node name="Menu" type="Label" parent="TextureButton (Menu)/Menu"]
+layout_mode = 2
+text = "Menu
+"
+label_settings = SubResource("LabelSettings_ld5tr")
+
+[connection signal="pressed" from="TextureButton (Back)" to="." method="_on_texture_button_back_pressed"]
+[connection signal="pressed" from="TextureButton (Menu)" to="." method="_on_texture_button_menu_pressed"]

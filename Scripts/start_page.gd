@@ -53,3 +53,8 @@ func _on_texture_button_quit_pressed() -> void:
 func _on_texture_button_info_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/instructions.tscn")
 	pass # Replace with function body.
+
+
+func _on_texture_button_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/credits.tscn")
+	pass # Replace with function body.

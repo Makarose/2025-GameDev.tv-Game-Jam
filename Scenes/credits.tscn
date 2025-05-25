@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://yxo0544eqfc0"]
+
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_1o5yh"]
+[ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="2_fvvb7"]
+[ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_i4a74"]
+[ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="4_gb2bi"]
+[ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="5_swxto"]
+[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_8lc24"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5v703"]
+font = ExtResource("3_i4a74")
+font_size = 160
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3v0ud"]
+font = ExtResource("3_i4a74")
+font_size = 160
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jds3i"]
+font = ExtResource("3_i4a74")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fax1m"]
+font = ExtResource("3_i4a74")
+font_size = 35
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dfcid"]
+font = ExtResource("3_i4a74")
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1o5yh")
+
+[node name="AquaGradientLighter" type="Sprite2D" parent="."]
+position = Vector2(968, 528)
+scale = Vector2(1.0309, 1.08)
+texture = ExtResource("2_fvvb7")
+
+[node name="White Title" type="MarginContainer" parent="."]
+z_index = 1
+offset_left = 424.247
+offset_top = 8.63998
+offset_right = 1516.25
+offset_bottom = 191.64
+
+[node name="White Title" type="Label" parent="White Title"]
+layout_mode = 2
+text = "Credits
+"
+label_settings = SubResource("LabelSettings_5v703")
+horizontal_alignment = 1
+
+[node name="Black Title" type="MarginContainer" parent="."]
+offset_left = 416.0
+offset_right = 1508.0
+offset_bottom = 183.0
+
+[node name="Black Title" type="Label" parent="Black Title"]
+layout_mode = 2
+text = "Credits
+"
+label_settings = SubResource("LabelSettings_3v0ud")
+horizontal_alignment = 1
+
+[node name="Credits (us)" type="MarginContainer" parent="."]
+offset_left = 184.0
+offset_top = 144.0
+offset_right = 1791.0
+offset_bottom = 375.0
+
+[node name="Credits" type="Label" parent="Credits (us)"]
+layout_mode = 2
+text = " Created by: Rosemarie Kaes & Eric Vennemeyer"
+label_settings = SubResource("LabelSettings_jds3i")
+
+[node name="Credits (sourced)" type="MarginContainer" parent="."]
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 1714.0
+offset_bottom = 975.0
+
+[node name="Credits" type="Label" parent="Credits (sourced)"]
+layout_mode = 2
+text = "Additional Assets Created By:
+
+Creator: Maaot 
+asset name: Mossy Cavern
+website: https://maaot.itch.io/mossy-cavern
+
+Creator: Thcyrax
+asset name: Customizable Stickman Hypercasual
+website: https://thcyrax.itch.io/customizable-stickman-hypercasual
+
+Creator: Baj123
+asset name: Jungle Game UI
+website: https://baj123.itch.io/jungle-game-ui"
+label_settings = SubResource("LabelSettings_fax1m")
+
+[node name="TextureButton (Back)" type="TextureButton" parent="."]
+offset_left = 56.0
+offset_top = 920.0
+offset_right = 1148.0
+offset_bottom = 1229.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_gb2bi")
+texture_pressed = ExtResource("5_swxto")
+texture_hover = ExtResource("6_8lc24")
+flip_h = true
+
+[node name="Back" type="MarginContainer" parent="TextureButton (Back)"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = -57.0
+offset_right = 1340.0
+offset_bottom = 252.0
+
+[node name="Back" type="Label" parent="TextureButton (Back)/Back"]
+layout_mode = 2
+text = "Back
+"
+label_settings = SubResource("LabelSettings_dfcid")
+
+[node name="TextureButton (Next)" type="TextureButton" parent="."]
+offset_left = 1624.0
+offset_top = 928.0
+offset_right = 2716.0
+offset_bottom = 1237.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_gb2bi")
+texture_pressed = ExtResource("5_swxto")
+texture_hover = ExtResource("6_8lc24")
+
+[node name="Next" type="MarginContainer" parent="TextureButton (Next)"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = -57.0
+offset_right = 1340.0
+offset_bottom = 252.0
+
+[node name="Back" type="Label" parent="TextureButton (Next)/Next"]
+layout_mode = 2
+text = "next
+"
+label_settings = SubResource("LabelSettings_dfcid")
+
+[connection signal="pressed" from="TextureButton (Back)" to="." method="_on_texture_button_back_pressed"]
+[connection signal="pressed" from="TextureButton (Next)" to="." method="_on_texture_button_next_pressed"]

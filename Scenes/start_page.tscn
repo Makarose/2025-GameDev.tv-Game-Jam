@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c4nk7mout8bq6"]
+[gd_scene load_steps=23 format=3 uid="uid://c4nk7mout8bq6"]
 
 [ext_resource type="Script" path="res://Scripts/start_page.gd" id="1_tk5l4"]
 [ext_resource type="Texture2D" uid="uid://bjtypwej3twg5" path="res://Background Layers/itch_io thumbnail (no text).png" id="2_7eft8"]
@@ -15,15 +15,18 @@
 [ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="11_jopr0"]
 [ext_resource type="Texture2D" uid="uid://lsvdwqj1g6ua" path="res://Jungle Pack UI/PNG/btn/about.png" id="12_uks1m"]
 [ext_resource type="Texture2D" uid="uid://bb6xqbkoybui0" path="res://Jungle Pack UI/PNG/btn/hover_info.png" id="13_037un"]
+[ext_resource type="Texture2D" uid="uid://sa8jr2optyhx" path="res://Jungle Pack UI/PNG/btn/credit.png" id="16_ow04x"]
+[ext_resource type="Texture2D" uid="uid://clh4isf7tb54s" path="res://Jungle Pack UI/PNG/btn/hover_credit.png" id="17_7w1wh"]
+[ext_resource type="Texture2D" uid="uid://dccoxcsf0y36j" path="res://Jungle Pack UI/PNG/btn/sound.png" id="18_txobs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pyekf"]
 font = ExtResource("5_oer7q")
-font_size = 140
+font_size = 160
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_15i01"]
 font = ExtResource("5_oer7q")
-font_size = 140
+font_size = 160
 font_color = Color(0.94902, 0.788235, 0.0509804, 1)
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
@@ -33,6 +36,9 @@ font = ExtResource("5_oer7q")
 font_size = 65
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ithd"]
+load_path = "res://.godot/imported/hover_sound.png-24b681df71aa5b5114feae532d36e306.ctex"
 
 [node name="StartPage" type="Control"]
 layout_mode = 3
@@ -54,18 +60,18 @@ texture = ExtResource("2_7eft8")
 centered = false
 
 [node name="Black Title" type="Label" parent="ItchIoThumbnail(noText)"]
-offset_left = 146.0
-offset_top = 77.0
-offset_right = 1308.0
-offset_bottom = 237.0
+offset_left = 94.0
+offset_top = 43.0
+offset_right = 1422.0
+offset_bottom = 226.0
 text = "Banana Man Dan"
 label_settings = SubResource("LabelSettings_pyekf")
 
 [node name="Yellow Title" type="Label" parent="ItchIoThumbnail(noText)"]
-offset_left = 152.0
-offset_top = 83.0
-offset_right = 1314.0
-offset_bottom = 243.0
+offset_left = 100.0
+offset_top = 49.0
+offset_right = 1428.0
+offset_bottom = 232.0
 text = "Banana Man Dan"
 label_settings = SubResource("LabelSettings_15i01")
 
@@ -78,7 +84,7 @@ offset_left = 146.0
 offset_top = 515.0
 offset_right = 270.12
 offset_bottom = 582.04
-scale = Vector2(0.604071, 0.60135)
+scale = Vector2(0.6, 0.6)
 toggle_mode = true
 texture_normal = ExtResource("3_ue7lv")
 texture_pressed = ExtResource("4_xusbh")
@@ -107,7 +113,7 @@ offset_left = 146.0
 offset_top = 324.0
 offset_right = 361.0
 offset_bottom = 539.0
-scale = Vector2(0.612001, 0.634793)
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("7_f8iyr")
 texture_pressed = ExtResource("10_y3q8d")
 texture_hover = ExtResource("8_0ftrj")
@@ -128,10 +134,10 @@ label_settings = SubResource("LabelSettings_qjo7u")
 [node name="TextureButton (Quit)" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 769.0
-offset_top = 324.0
+offset_top = 713.0
 offset_right = 984.0
-offset_bottom = 539.0
-scale = Vector2(0.612001, 0.634793)
+offset_bottom = 928.0
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("9_3s0ds")
 texture_pressed = ExtResource("10_y3q8d")
 texture_hover = ExtResource("11_jopr0")
@@ -151,10 +157,10 @@ label_settings = SubResource("LabelSettings_qjo7u")
 [node name="TextureButton (Info)" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 769.0
-offset_top = 515.0
+offset_top = 324.0
 offset_right = 984.0
-offset_bottom = 730.0
-scale = Vector2(0.612001, 0.647074)
+offset_bottom = 539.0
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("12_uks1m")
 texture_pressed = ExtResource("10_y3q8d")
 texture_hover = ExtResource("13_037un")
@@ -171,9 +177,57 @@ text = "Instructions
 "
 label_settings = SubResource("LabelSettings_qjo7u")
 
+[node name="TextureButton (Credits)" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 713.0
+offset_right = 367.0
+offset_bottom = 928.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("16_ow04x")
+texture_pressed = ExtResource("10_y3q8d")
+texture_hover = ExtResource("17_7w1wh")
+
+[node name="Instructions" type="Label" parent="TextureButton (Credits)"]
+layout_mode = 0
+offset_left = 238.333
+offset_top = 58.3333
+offset_right = 648.333
+offset_bottom = 211.333
+scale = Vector2(1.68317, 1.34724)
+text = "Credits
+
+"
+label_settings = SubResource("LabelSettings_qjo7u")
+
+[node name="TextureButton (SFX)" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 515.0
+offset_right = 984.0
+offset_bottom = 730.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("18_txobs")
+texture_pressed = ExtResource("10_y3q8d")
+texture_hover = SubResource("CompressedTexture2D_3ithd")
+
+[node name="Instructions" type="Label" parent="TextureButton (SFX)"]
+layout_mode = 0
+offset_left = 238.333
+offset_top = 58.3333
+offset_right = 648.333
+offset_bottom = 211.333
+scale = Vector2(1.68317, 1.34724)
+text = "SFX On/Off
+
+"
+label_settings = SubResource("LabelSettings_qjo7u")
+
 [connection signal="mouse_entered" from="ToggleSound" to="." method="_on_toggle_sound_mouse_entered"]
 [connection signal="mouse_exited" from="ToggleSound" to="." method="_on_toggle_sound_mouse_exited"]
 [connection signal="pressed" from="ToggleSound" to="." method="_on_toggle_sound_pressed"]
 [connection signal="pressed" from="TextureButton (Play)" to="." method="_on_texture_button_play_pressed"]
 [connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]
 [connection signal="pressed" from="TextureButton (Info)" to="." method="_on_texture_button_info_pressed"]
+[connection signal="pressed" from="TextureButton (Credits)" to="." method="_on_texture_button_credits_pressed"]
+[connection signal="pressed" from="TextureButton (SFX)" to="." method="_on_texture_button_credits_pressed"]
