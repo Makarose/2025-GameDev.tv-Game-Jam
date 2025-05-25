@@ -1,0 +1,54 @@
+[gd_scene load_steps=14 format=3 uid="uid://bteoqw23vodl7"]
+
+[ext_resource type="Script" path="res://Scripts/sfx_manager.gd" id="1_cm83g"]
+[ext_resource type="AudioStream" uid="uid://brbjcabmgabiw" path="res://Sound Effects/Banana Man Sound Effects/Jump.ogg" id="2_17fcf"]
+[ext_resource type="AudioStream" uid="uid://t7e4qodnimhb" path="res://Sound Effects/Banana Man Sound Effects/Lose Life Final.ogg" id="3_35ira"]
+[ext_resource type="AudioStream" uid="uid://blweoifv3lc5p" path="res://Sound Effects/Banana Man Sound Effects/Single Banana 1.ogg" id="4_42lon"]
+[ext_resource type="AudioStream" uid="uid://j0qxbun11re" path="res://Sound Effects/Banana Man Sound Effects/Single Banana 2.ogg" id="5_8nfu8"]
+[ext_resource type="AudioStream" uid="uid://c2pr1iyn0km8m" path="res://Sound Effects/Banana Man Sound Effects/Bunch Banana 1.ogg" id="6_134ra"]
+[ext_resource type="AudioStream" uid="uid://bg52qd33yduqx" path="res://Sound Effects/Banana Man Sound Effects/Bunch Banana 2.ogg" id="7_kg0ns"]
+[ext_resource type="AudioStream" uid="uid://c6fnec06lo578" path="res://Sound Effects/Banana Man Sound Effects/Hit Enemy 1.ogg" id="8_fbqwp"]
+[ext_resource type="AudioStream" uid="uid://bcg61r4too0xe" path="res://Sound Effects/Banana Man Sound Effects/Hit Enemy 2.ogg" id="9_0pyt0"]
+[ext_resource type="AudioStream" uid="uid://cchaml7pfmw20" path="res://Sound Effects/Banana Man Sound Effects/Hit Ring 1.ogg" id="10_n1qdq"]
+[ext_resource type="AudioStream" uid="uid://ct6158puq76pa" path="res://Sound Effects/Banana Man Sound Effects/Hit Ring 2.ogg" id="11_8r5se"]
+[ext_resource type="AudioStream" uid="uid://lv6luvek2vtc" path="res://Sound Effects/Banana Man Sound Effects/Lose Life Single 1.ogg" id="12_c1y5b"]
+[ext_resource type="AudioStream" uid="uid://do06jbx7gwbrl" path="res://Sound Effects/Banana Man Sound Effects/Lose Life Single 2.ogg" id="13_fpfuw"]
+
+[node name="SfxManager" type="Node"]
+script = ExtResource("1_cm83g")
+
+[node name="LoseLifeFinal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_35ira")
+
+[node name="SingleBanana1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_42lon")
+
+[node name="SingleBanana2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8nfu8")
+
+[node name="BunchBanana1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_134ra")
+
+[node name="BunchBanana2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_kg0ns")
+
+[node name="HitEnemy1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fbqwp")
+
+[node name="HitEnemy2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_0pyt0")
+
+[node name="HitRing1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_n1qdq")
+
+[node name="HitRing2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_8r5se")
+
+[node name="LoseLifeSingle1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_c1y5b")
+
+[node name="LoseLifeSingle2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_fpfuw")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_17fcf")

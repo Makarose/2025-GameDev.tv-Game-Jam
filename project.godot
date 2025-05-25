@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*res://Scripts/signal_bus.gd"
+SfxManager="*res://Scripts/sfx_manager.gd"
 
 [display]
 

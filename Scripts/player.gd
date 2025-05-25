@@ -202,4 +202,4 @@ func apply_gravity(delta) -> void:
 		if velocity.y <= 0:
 			velocity.y += up_gravity * delta
 		else:
-			velocity.y += down_gravity * delta  
+			velocity.y += down_gravity * delta
