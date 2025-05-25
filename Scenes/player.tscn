@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b31af15tfptdq"]
+[gd_scene load_steps=21 format=3 uid="uid://b31af15tfptdq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_ctbhi"]
 [ext_resource type="Material" uid="uid://cnid5w0al0gbu" path="res://assets/effects_material.tres" id="2_23wte"]
@@ -11,6 +11,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gapsy"]
 radius = 18.0
 height = 178.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dei57"]
+size = Vector2(50, 10)
 
 [sub_resource type="Animation" id="Animation_hna1q"]
 length = 0.001
@@ -673,6 +676,10 @@ collision_mask = 4
 position = Vector2(5, -89)
 shape = SubResource("CapsuleShape2D_gapsy")
 
+[node name="FeetCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_dei57")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_102kp")
@@ -685,6 +692,8 @@ libraries = {
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 self_modulate = Color(0.0862745, 1, 1, 0.901961)
 build_mode = 1
 polygon = PackedVector2Array(-16, -126, -23, -85, -33, -39, -36, -25, -31, -18, -2, -34, -10, -6, 21, -6, 20, -51, 30, -65, 37, -82, 41, -111, 39, -131, 33, -147, 28, -163, 10, -184, -6, -210, -16, -227, -27, -218, -28, -213, -16, -205, -12, -190, -13, -174)
+disabled = true
