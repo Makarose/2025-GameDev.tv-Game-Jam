@@ -3,6 +3,7 @@
 [ext_resource type="Shader" path="res://assets/effects_material.gdshader" id="1_1nywv"]
 
 [resource]
+resource_local_to_scene = true
 shader = ExtResource("1_1nywv")
 shader_parameter/flash_enabled = false
 shader_parameter/flash_color = Color(1, 1, 1, 1)

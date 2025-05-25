@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://mjw08h857u3e"]
+[gd_scene load_steps=38 format=3 uid="uid://mjw08h857u3e"]
 
 [ext_resource type="Script" path="res://Scripts/slime_enemy.gd" id="1_8mrwq"]
 [ext_resource type="Texture2D" uid="uid://dwt2br2gbes1f" path="res://Sprites/Purple Slime Enemy/000.png" id="2_8qui7"]
+[ext_resource type="Material" uid="uid://cnid5w0al0gbu" path="res://assets/effects_material.tres" id="2_wjue3"]
 [ext_resource type="Texture2D" uid="uid://bn0bfm0ebaspg" path="res://Sprites/Purple Slime Enemy/001.png" id="3_mvaa3"]
 [ext_resource type="Texture2D" uid="uid://b3lwjjq4saufp" path="res://Sprites/Purple Slime Enemy/002.png" id="4_7tog3"]
 [ext_resource type="Texture2D" uid="uid://cw0fi68v6gc73" path="res://Sprites/Purple Slime Enemy/003.png" id="5_4bit6"]
@@ -132,12 +133,51 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8o76m"]
 
+[sub_resource type="Animation" id="Animation_6a74m"]
+resource_name = "hit"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/flash_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_hep7i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/flash_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m5wqg"]
+_data = {
+"RESET": SubResource("Animation_hep7i"),
+"hit": SubResource("Animation_6a74m")
+}
+
 [node name="SlimeEnemy" type="Area2D"]
 z_index = -1
 collision_layer = 8
 script = ExtResource("1_8mrwq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("2_wjue3")
 position = Vector2(-44, -182)
 scale = Vector2(0.4, 0.8)
 sprite_frames = SubResource("SpriteFrames_xii6b")
@@ -160,5 +200,10 @@ position = Vector2(95, 0)
 target_position = Vector2(0, 20)
 collision_mask = 2
 hit_from_inside = true
+
+[node name="EffectsAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m5wqg")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

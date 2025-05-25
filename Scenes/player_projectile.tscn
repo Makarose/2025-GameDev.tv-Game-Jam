@@ -22,12 +22,12 @@ texture = ExtResource("1_4g16e")
 
 [node name="SplatSprite" type="Sprite2D" parent="Anchor"]
 visible = false
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1imnp")
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 12
 script = ExtResource("3_jnoer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
