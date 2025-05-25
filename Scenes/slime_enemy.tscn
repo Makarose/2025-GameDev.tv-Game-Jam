@@ -130,8 +130,7 @@ animations = [{
 "speed": 25.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdb1o"]
-size = Vector2(65, 66)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8o76m"]
 
 [node name="SlimeEnemy" type="Area2D"]
 z_index = -1
@@ -139,15 +138,16 @@ collision_layer = 8
 script = ExtResource("1_8mrwq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-44, -91)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-44, -182)
+scale = Vector2(0.4, 0.8)
 sprite_frames = SubResource("SpriteFrames_xii6b")
 autoplay = "default"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(33, -33)
-shape = SubResource("RectangleShape2D_vdb1o")
+position = Vector2(32, -77)
+scale = Vector2(-5.79992, 7.6746)
+shape = SubResource("CircleShape2D_8o76m")
 
 [node name="LeftRayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-32, 0)
