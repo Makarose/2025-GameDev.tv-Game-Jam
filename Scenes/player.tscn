@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b31af15tfptdq"]
+[gd_scene load_steps=23 format=3 uid="uid://b31af15tfptdq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_ctbhi"]
 [ext_resource type="Material" uid="uid://cnid5w0al0gbu" path="res://assets/effects_material.tres" id="2_23wte"]
@@ -638,6 +638,14 @@ _data = {
 "invincible": SubResource("Animation_4msqn")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1kob"]
+size = Vector2(34, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o7beo"]
+radius = 11.9815
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwugi"]
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 z_as_relative = false
@@ -672,6 +680,12 @@ collision_mask = 4
 position = Vector2(5, -89)
 shape = SubResource("CapsuleShape2D_gapsy")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-11, -111)
+rotation = 0.169442
+scale = Vector2(0.432994, 0.936342)
+shape = SubResource("CapsuleShape2D_gapsy")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_102kp")
@@ -682,3 +696,24 @@ autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_hryf1")
 }
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(3, -10)
+shape = SubResource("RectangleShape2D_v1kob")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(17, -111)
+scale = Vector2(1.84, 4.28)
+shape = SubResource("CircleShape2D_o7beo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -56)
+rotation = 0.669948
+scale = Vector2(1.33911, 3.62386)
+shape = SubResource("CircleShape2D_o7beo")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(0.999997, -181)
+rotation = -0.477722
+scale = Vector2(-0.914298, 3.29136)
+shape = SubResource("CapsuleShape2D_bwugi")

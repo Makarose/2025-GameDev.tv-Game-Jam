@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://rna4fbhwckih"]
+[gd_scene load_steps=17 format=3 uid="uid://rna4fbhwckih"]
 
 [ext_resource type="Script" path="res://Scripts/end_page.gd" id="1_7vj3x"]
 [ext_resource type="Texture2D" uid="uid://dujq4xs6wxr3d" path="res://Sprites/Banana Man Animations/die (single frame).png" id="2_flymk"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="7_dgtvm"]
 [ext_resource type="Texture2D" uid="uid://cuio3vr7l1gee" path="res://Jungle Pack UI/PNG/btn/hover_replay.png" id="7_n1riy"]
 [ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_82btg"]
+[ext_resource type="Texture2D" uid="uid://dijrqebvvvwj8" path="res://Jungle Pack UI/PNG/btn/menu.png" id="11_q5rse"]
+[ext_resource type="Texture2D" uid="uid://dqe6q35522fpr" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="12_uwok2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7cssc"]
 font = ExtResource("3_u8hgx")
@@ -53,19 +55,19 @@ scale = Vector2(1, 0.962602)
 texture = ExtResource("3_rgvts")
 
 [node name="Black Title" type="Label" parent="AquaGradientLighter"]
-offset_left = -771.514
-offset_top = -462.124
-offset_right = 390.486
-offset_bottom = -279.124
+offset_left = -724.394
+offset_top = -477.74
+offset_right = 437.606
+offset_bottom = -294.74
 text = "Game Over
 "
 label_settings = SubResource("LabelSettings_7cssc")
 
 [node name="White Title" type="Label" parent="AquaGradientLighter"]
-offset_left = -757.661
-offset_top = -455.891
-offset_right = 404.339
-offset_bottom = -272.891
+offset_left = -710.541
+offset_top = -471.507
+offset_right = 451.459
+offset_bottom = -288.507
 text = "Game Over
 "
 label_settings = SubResource("LabelSettings_qewg4")
@@ -134,10 +136,10 @@ label_settings = SubResource("LabelSettings_wehpi")
 
 [node name="TextureButton (Quit)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 764.314
-offset_top = 774.132
-offset_right = 979.314
-offset_bottom = 989.132
+offset_left = 1342.95
+offset_top = 789.162
+offset_right = 1557.95
+offset_bottom = 1004.16
 scale = Vector2(0.612001, 0.634793)
 texture_normal = ExtResource("6_p500g")
 texture_pressed = ExtResource("7_dgtvm")
@@ -155,5 +157,29 @@ text = "Quit
 "
 label_settings = SubResource("LabelSettings_xxw1e")
 
+[node name="TextureButton (Menu)" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 848.181
+offset_top = 781.646
+offset_right = 1063.18
+offset_bottom = 996.646
+scale = Vector2(0.612001, 0.634793)
+texture_normal = ExtResource("11_q5rse")
+texture_pressed = ExtResource("7_dgtvm")
+texture_hover = ExtResource("12_uwok2")
+
+[node name="Menu" type="Label" parent="TextureButton (Menu)"]
+layout_mode = 0
+offset_left = 256.651
+offset_top = 47.3592
+offset_right = 662.651
+offset_bottom = 200.359
+scale = Vector2(1.68317, 1.34724)
+text = "Menu
+
+"
+label_settings = SubResource("LabelSettings_xxw1e")
+
 [connection signal="pressed" from="TextureButton (Replay)" to="." method="_on_texture_button_replay_pressed"]
 [connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]
+[connection signal="pressed" from="TextureButton (Menu)" to="." method="_on_texture_button_menu_pressed"]
