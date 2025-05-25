@@ -50,6 +50,7 @@ texture = ExtResource("2_fvvb7")
 
 [node name="White Title" type="MarginContainer" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 424.247
 offset_top = 8.63998
 offset_right = 1516.25
@@ -63,6 +64,7 @@ label_settings = SubResource("LabelSettings_5v703")
 horizontal_alignment = 1
 
 [node name="Black Title" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 416.0
 offset_right = 1508.0
 offset_bottom = 183.0
@@ -75,6 +77,7 @@ label_settings = SubResource("LabelSettings_3v0ud")
 horizontal_alignment = 1
 
 [node name="Credits (us)" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 184.0
 offset_top = 144.0
 offset_right = 1791.0
@@ -86,6 +89,7 @@ text = " Created by: Rosemarie Kaes & Eric Vennemeyer"
 label_settings = SubResource("LabelSettings_jds3i")
 
 [node name="Credits (sourced)" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 216.0
 offset_top = 328.0
 offset_right = 1714.0
@@ -109,6 +113,7 @@ website: https://baj123.itch.io/jungle-game-ui"
 label_settings = SubResource("LabelSettings_fax1m")
 
 [node name="TextureButton (Back)" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 920.0
 offset_right = 1148.0
@@ -133,6 +138,7 @@ text = "Back
 label_settings = SubResource("LabelSettings_dfcid")
 
 [node name="TextureButton (Next)" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1624.0
 offset_top = 928.0
 offset_right = 2716.0

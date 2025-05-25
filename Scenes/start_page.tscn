@@ -38,7 +38,6 @@ outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ithd"]
-load_path = "res://.godot/imported/hover_sound.png-24b681df71aa5b5114feae532d36e306.ctex"
 
 [node name="StartPage" type="Control"]
 layout_mode = 3

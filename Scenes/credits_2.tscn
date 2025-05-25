@@ -52,6 +52,7 @@ texture = ExtResource("2_ujr5c")
 
 [node name="White Title" type="MarginContainer" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 424.247
 offset_top = 8.63998
 offset_right = 1516.25
@@ -65,6 +66,7 @@ label_settings = SubResource("LabelSettings_txaxa")
 horizontal_alignment = 1
 
 [node name="Black Title" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 416.0
 offset_right = 1508.0
 offset_bottom = 183.0
@@ -77,6 +79,7 @@ label_settings = SubResource("LabelSettings_dtkkr")
 horizontal_alignment = 1
 
 [node name="Credits (sourced)" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 344.0
 offset_top = 184.0
 offset_right = 1755.0
@@ -103,6 +106,7 @@ website: https://ggbot.itch.io/free-cheese-font"
 label_settings = SubResource("LabelSettings_xuxw2")
 
 [node name="TextureButton (Back)" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 920.0
 offset_right = 1148.0
@@ -127,6 +131,7 @@ text = "Back
 label_settings = SubResource("LabelSettings_r5bfe")
 
 [node name="TextureButton (Menu)" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 1640.0
 offset_top = 904.0
 offset_right = 1855.0
@@ -137,6 +142,7 @@ texture_pressed = ExtResource("5_tpmxr")
 texture_hover = ExtResource("8_xiurv")
 
 [node name="Menu" type="MarginContainer" parent="TextureButton (Menu)"]
+layout_mode = 0
 offset_left = 248.0
 offset_top = -57.0
 offset_right = 1340.0
