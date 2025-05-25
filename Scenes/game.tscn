@@ -48,6 +48,7 @@ script = ExtResource("1_yrajc")
 end_screen = ExtResource("2_tfe5t")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
+visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -117,6 +118,7 @@ scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_lf18l")
+can_contract = false
 contract_rate = 0.03
 contract_acceleration = 0.0
 expand_amount = 0.1

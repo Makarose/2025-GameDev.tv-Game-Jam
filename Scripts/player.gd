@@ -145,7 +145,6 @@ func take_damage() -> void:
 	if is_invincible:
 		return
 	SignalBus.player_health -= 1
-	#position.x += knockback_amount * sign(anchor.scale.x)
 
 
 func calculate_max_height() -> void:

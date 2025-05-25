@@ -15,6 +15,7 @@ func _ready() -> void:
 	camera_2d.setup_camera(player)
 	level_generator.setup(player)
 	
+	SignalBus.player_health = 3
 	SignalBus.distance_climbed = 0
 	
 	SignalBus.player_damage.connect(_on_player_damage)
