@@ -18,7 +18,7 @@ func _ready() -> void:
 	limit_right = viewport_size.x
 	
 	# Initialize KillZone position and collision shape size
-	kill_zone.position.y = global_position.y + viewport_size.y
+	kill_zone.global_position.y = get_screen_center_position().y + viewport_size.y / 2 + 275
 	kill_zone_shape.shape.size = Vector2(viewport_size.x, 200)
 
 

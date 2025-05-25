@@ -10,10 +10,14 @@ enum States { MOVE, DAMAGE, DEATH }
 @onready var ring_boundary: RingBoundary = $RingBoundary
 @onready var pause_screen: CanvasLayer = $PauseScreen
 
+var viewport_size: Vector2
+
 
 func _ready() -> void:
 	camera_2d.setup_camera(player)
 	level_generator.setup(player)
+	
+	viewport_size = get_viewport_rect().size
 	
 	SignalBus.player_health = 3
 	SignalBus.distance_climbed = 0
@@ -23,6 +27,15 @@ func _ready() -> void:
 	
 	player.player_crunched.connect(_on_player_crunched)
 	player.game_over.connect(_on_game_over)
+
+
+func _process(delta: float) -> void:
+	# Check if player has fallen below lower screen boundary and end game if it has
+	var camera_center = camera_2d.get_screen_center_position()
+	var player_position = player.global_position
+	var bottom_of_screen: int = camera_center.y + (viewport_size.y / 2)
+	if (player_position.y - 256) > bottom_of_screen:
+		player.state = States.DEATH
 
 
 func _on_player_damage() -> void:
