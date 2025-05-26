@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dap617say6cj6"
-path="res://.godot/imported/credit.png-123fcacf8f9f1c76c5996b8386b8de23.ctex"
+uid="uid://cu384ipdhx5hh"
+path="res://.godot/imported/walking (single frame).png-048d8c67972ace5ca60603432e64f01e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jungle Pack UI/PNG/btn/credit.png"
-dest_files=["res://.godot/imported/credit.png-123fcacf8f9f1c76c5996b8386b8de23.ctex"]
+source_file="res://Sprites/Banana Man Animations/walking (single frame).png"
+dest_files=["res://.godot/imported/walking (single frame).png-048d8c67972ace5ca60603432e64f01e.ctex"]
 
 [params]
 

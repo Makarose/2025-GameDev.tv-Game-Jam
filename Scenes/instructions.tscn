@@ -1,14 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://biomhpvr1hg1h"]
+[gd_scene load_steps=19 format=3 uid="uid://biomhpvr1hg1h"]
 
 [ext_resource type="Script" path="res://Scripts/instructions.gd" id="1_cg73y"]
 [ext_resource type="Texture2D" uid="uid://iagcmq43wug1" path="res://Background Layers/aqua gradient lighter.png" id="2_smgb4"]
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_qy6bq"]
 [ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="4_dba11"]
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="5_sh01l"]
-[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_ghlq7"]
 [ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="7_2sbj7"]
-[ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_3ixjr"]
+[ext_resource type="Texture2D" uid="uid://bnwojvabv86kn" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="7_e83n8"]
+[ext_resource type="Texture2D" uid="uid://dcwek10e3pdtg" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_wcpon"]
 [ext_resource type="Texture2D" uid="uid://gxvic16i7rwc" path="res://Jungle Pack UI/PNG/btn/empty.png" id="9_viryv"]
+[ext_resource type="Texture2D" uid="uid://cu384ipdhx5hh" path="res://Sprites/Banana Man Animations/walking (single frame).png" id="10_spvrr"]
+[ext_resource type="Texture2D" uid="uid://dgwm4ksrdhcih" path="res://Sprites/Banana Man Animations/throw (single frame).png" id="11_oloab"]
+[ext_resource type="Texture2D" uid="uid://6svr2qc1it8n" path="res://Sprites/Banana Man Animations/jump_sprite.png" id="12_d576n"]
+[ext_resource type="Texture2D" uid="uid://drv37rrdp1em2" path="res://Jungle Pack UI/PNG/btn/next.png" id="14_ut0ll"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eiodc"]
 font = ExtResource("3_qy6bq")
@@ -33,6 +37,12 @@ font_size = 65
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_8dw5u"]
+font = ExtResource("3_qy6bq")
+font_size = 45
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Instructions" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -41,19 +51,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cg73y")
-metadata/_edit_horizontal_guides_ = [1056.0]
+metadata/_edit_horizontal_guides_ = [1056.0, 1024.0, 256.0, 608.0]
+metadata/_edit_vertical_guides_ = [32.0, 1856.0, 960.0]
 
 [node name="AquaGradientLighter" type="Sprite2D" parent="."]
 position = Vector2(968, 528)
 scale = Vector2(1.0309, 1.08)
 texture = ExtResource("2_smgb4")
+metadata/_edit_lock_ = true
 
 [node name="White Title" type="MarginContainer" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 440.0
-offset_right = 1532.0
-offset_bottom = 183.0
+offset_left = 416.0
+offset_top = 8.0
+offset_right = 1508.0
+offset_bottom = 191.0
 
 [node name="White Title" type="Label" parent="White Title"]
 layout_mode = 2
@@ -64,10 +77,9 @@ horizontal_alignment = 1
 
 [node name="Black Title" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 432.0
-offset_top = -8.0
-offset_right = 1524.0
-offset_bottom = 175.0
+offset_left = 408.0
+offset_right = 1500.0
+offset_bottom = 183.0
 
 [node name="Black Title" type="Label" parent="Black Title"]
 layout_mode = 2
@@ -78,23 +90,23 @@ horizontal_alignment = 1
 
 [node name="Walk" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 152.0
-offset_top = 272.0
-offset_right = 323.0
-offset_bottom = 347.0
+offset_left = 256.0
+offset_top = 240.0
+offset_right = 427.0
+offset_bottom = 315.0
+scale = Vector2(1, 0.840001)
 
 [node name="Walk" type="Label" parent="Walk"]
 layout_mode = 2
-text = "Walk
-"
+text = "Walk"
 label_settings = SubResource("LabelSettings_d825v")
 
 [node name="Attack" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 1432.0
-offset_top = 208.0
-offset_right = 1671.0
-offset_bottom = 439.0
+offset_left = 1520.0
+offset_top = 240.0
+offset_right = 1759.0
+offset_bottom = 315.0
 
 [node name="Attack" type="Label" parent="Attack"]
 layout_mode = 2
@@ -103,10 +115,10 @@ label_settings = SubResource("LabelSettings_d825v")
 
 [node name="Jump" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 912.0
-offset_top = 264.0
-offset_right = 1067.0
-offset_bottom = 417.0
+offset_left = 928.0
+offset_top = 240.0
+offset_right = 1083.0
+offset_bottom = 315.0
 
 [node name="Jump" type="Label" parent="Jump"]
 layout_mode = 2
@@ -115,39 +127,38 @@ label_settings = SubResource("LabelSettings_d825v")
 
 [node name="TextureButton (Back)" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 56.0
-offset_top = 857.0
-offset_right = 1148.0
-offset_bottom = 1166.0
+offset_left = 32.0
+offset_top = 896.0
+offset_right = 246.0
+offset_bottom = 1111.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("4_dba11")
 texture_pressed = ExtResource("5_sh01l")
-texture_hover = ExtResource("6_ghlq7")
+texture_hover = ExtResource("7_e83n8")
 flip_h = true
 
 [node name="Back" type="MarginContainer" parent="TextureButton (Back)"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = -57.0
-offset_right = 1340.0
-offset_bottom = 252.0
+offset_left = 240.0
+offset_top = 66.6667
+offset_right = 406.0
+offset_bottom = 141.667
 
 [node name="Back" type="Label" parent="TextureButton (Back)/Back"]
 layout_mode = 2
-text = "Back
-"
+text = "Back"
 label_settings = SubResource("LabelSettings_3mgpu")
 
 [node name="TextureButton (Play)" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 712.0
-offset_top = 840.0
-offset_right = 926.0
-offset_bottom = 1055.0
+offset_left = 848.0
+offset_top = 896.0
+offset_right = 1062.0
+offset_bottom = 1111.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("4_dba11")
 texture_pressed = ExtResource("5_sh01l")
-texture_hover = ExtResource("6_ghlq7")
+texture_hover = ExtResource("7_e83n8")
 
 [node name="Play" type="MarginContainer" parent="TextureButton (Play)"]
 layout_mode = 0
@@ -163,59 +174,208 @@ label_settings = SubResource("LabelSettings_3mgpu")
 
 [node name="TextureButton (Quit)" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 1544.0
-offset_top = 872.0
-offset_right = 1758.0
-offset_bottom = 1087.0
+offset_left = 1600.0
+offset_top = 896.0
+offset_right = 1814.0
+offset_bottom = 1111.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("7_2sbj7")
 texture_pressed = ExtResource("5_sh01l")
-texture_hover = ExtResource("8_3ixjr")
+texture_hover = ExtResource("8_wcpon")
 
 [node name="Quit" type="MarginContainer" parent="TextureButton (Quit)"]
 layout_mode = 0
 offset_left = 240.0
-offset_top = 32.0
-offset_right = 454.0
-offset_bottom = 247.0
+offset_top = 66.6666
+offset_right = 388.0
+offset_bottom = 141.667
 
 [node name="Quit" type="Label" parent="TextureButton (Quit)/Quit"]
 layout_mode = 2
-text = "Quit
-
-"
-label_settings = SubResource("LabelSettings_d825v")
-
-[node name="Pause2" type="Label" parent="."]
-layout_mode = 2
-offset_left = 240.0
-offset_top = 640.0
-offset_right = 578.0
-offset_bottom = 715.0
-text = "Pause"
+text = "Quit"
 label_settings = SubResource("LabelSettings_d825v")
 
 [node name="Empty" type="Sprite2D" parent="."]
-position = Vector2(770.435, 679.179)
-scale = Vector2(2.63958, 1.18306)
+position = Vector2(1102.36, 467)
+scale = Vector2(1.48, 0.4)
 texture = ExtResource("9_viryv")
 
-[node name="Space Bar" type="Label" parent="."]
-layout_mode = 2
-offset_left = 586.435
-offset_top = 639.179
-offset_right = 924.435
-offset_bottom = 714.179
-text = "Space Bar
-"
-label_settings = SubResource("LabelSettings_d825v")
+[node name="Empty2" type="Sprite2D" parent="."]
+position = Vector2(274.8, 750)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_viryv")
 
-[node name="Pause" type="MarginContainer" parent="."]
+[node name="Empty4" type="Sprite2D" parent="."]
+position = Vector2(402.8, 747)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_viryv")
+
+[node name="Empty9" type="Sprite2D" parent="."]
+position = Vector2(1786.8, 475)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_viryv")
+
+[node name="Walking(singleFrame)" type="Sprite2D" parent="."]
+position = Vector2(473.401, 430.414)
+scale = Vector2(0.711666, 0.743806)
+texture = ExtResource("10_spvrr")
+flip_h = true
+
+[node name="Walking(singleFrame)2" type="Sprite2D" parent="."]
+position = Vector2(201.401, 430.414)
+scale = Vector2(0.711666, 0.743806)
+texture = ExtResource("10_spvrr")
+
+[node name="Throw(singleFrame)" type="Sprite2D" parent="."]
+position = Vector2(1465.93, 429.747)
+scale = Vector2(0.355511, 0.386224)
+texture = ExtResource("11_oloab")
+flip_h = true
+
+[node name="JumpSprite" type="Sprite2D" parent="."]
+position = Vector2(872, 440)
+scale = Vector2(0.729183, 0.777306)
+texture = ExtResource("12_d576n")
+flip_h = true
+
+[node name="walk written" type="Label" parent="."]
 layout_mode = 0
-offset_left = 240.0
-offset_top = 640.0
-offset_right = 578.0
-offset_bottom = 715.0
+offset_left = 154.8
+offset_top = 718.0
+offset_right = 215.8
+offset_bottom = 771.0
+text = "or
+"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 458.8
+offset_top = 715.0
+offset_right = 519.8
+offset_bottom = 768.0
+text = "or
+"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 624.0
+offset_right = 551.0
+offset_bottom = 677.0
+text = "Right
+"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written11" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 624.0
+offset_right = 255.0
+offset_bottom = 677.0
+text = "Leftq
+"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 990.36
+offset_top = 435.0
+offset_right = 1212.36
+offset_bottom = 488.0
+text = "spacebar"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="Empty3" type="Sprite2D" parent="."]
+position = Vector2(1035.9, 744.632)
+scale = Vector2(1.68126, 0.377975)
+texture = ExtResource("9_viryv")
+
+[node name="walk written12" type="Label" parent="."]
+layout_mode = 0
+offset_left = 905.535
+offset_top = 714.632
+offset_right = 1187.54
+offset_bottom = 767.632
+text = "P to Pause"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="Empty8" type="Sprite2D" parent="."]
+position = Vector2(1633.16, 747)
+scale = Vector2(1.88, 0.4)
+texture = ExtResource("9_viryv")
+
+[node name="walk written13" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1495.16
+offset_top = 716.0
+offset_right = 1768.16
+offset_bottom = 769.0
+text = "esc to Quit"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 386.8
+offset_top = 715.0
+offset_right = 447.8
+offset_bottom = 768.0
+text = "D"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 258.8
+offset_top = 718.0
+offset_right = 319.8
+offset_bottom = 771.0
+text = "A"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="Next" type="Sprite2D" parent="."]
+position = Vector2(98.8, 750)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_ut0ll")
+flip_h = true
+
+[node name="Next2" type="Sprite2D" parent="."]
+position = Vector2(578.8, 747)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_ut0ll")
+
+[node name="Empty5" type="Sprite2D" parent="."]
+position = Vector2(1610.8, 475)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_viryv")
+
+[node name="walk written7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1669.6
+offset_top = 446.0
+offset_right = 1730.6
+offset_bottom = 499.0
+text = "or
+"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1596.8
+offset_top = 444.0
+offset_right = 1657.8
+offset_bottom = 497.0
+text = "k"
+label_settings = SubResource("LabelSettings_8dw5u")
+
+[node name="walk written9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1767.8
+offset_top = 442.0
+offset_right = 1828.8
+offset_bottom = 495.0
+text = "x"
+label_settings = SubResource("LabelSettings_8dw5u")
 
 [connection signal="pressed" from="TextureButton (Back)" to="." method="_on_texture_button_back_pressed"]
 [connection signal="pressed" from="TextureButton (Play)" to="." method="_on_texture_button_play_pressed"]

@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://b3niqi0oobfqo" path="res://Jungle Pack UI/PNG/btn/restart.png" id="5_ehdgk"]
 [ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="6_p500g"]
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="7_dgtvm"]
-[ext_resource type="Texture2D" uid="uid://cuio3vr7l1gee" path="res://Jungle Pack UI/PNG/btn/hover_replay.png" id="7_n1riy"]
-[ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="8_82btg"]
+[ext_resource type="Texture2D" uid="uid://cry8noy301flg" path="res://Jungle Pack UI/PNG/btn/hover_replay.png" id="8_hbcpw"]
+[ext_resource type="Texture2D" uid="uid://dcwek10e3pdtg" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="10_jn11l"]
 [ext_resource type="Texture2D" uid="uid://dijrqebvvvwj8" path="res://Jungle Pack UI/PNG/btn/menu.png" id="11_q5rse"]
-[ext_resource type="Texture2D" uid="uid://dqe6q35522fpr" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="12_uwok2"]
+[ext_resource type="Texture2D" uid="uid://bfdf2p5y7bvuw" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="12_v5x0d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7cssc"]
 font = ExtResource("3_u8hgx")
@@ -120,7 +120,7 @@ offset_bottom = 993.132
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("5_ehdgk")
 texture_pressed = ExtResource("7_dgtvm")
-texture_hover = ExtResource("7_n1riy")
+texture_hover = ExtResource("8_hbcpw")
 
 [node name="Replay" type="Label" parent="TextureButton (Replay)"]
 layout_mode = 0
@@ -143,7 +143,7 @@ offset_bottom = 1004.16
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("6_p500g")
 texture_pressed = ExtResource("7_dgtvm")
-texture_hover = ExtResource("8_82btg")
+texture_hover = ExtResource("10_jn11l")
 
 [node name="Quit" type="Label" parent="TextureButton (Quit)"]
 layout_mode = 0
@@ -166,7 +166,7 @@ offset_bottom = 996.646
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("11_q5rse")
 texture_pressed = ExtResource("7_dgtvm")
-texture_hover = ExtResource("12_uwok2")
+texture_hover = ExtResource("12_v5x0d")
 
 [node name="Menu" type="Label" parent="TextureButton (Menu)"]
 layout_mode = 0

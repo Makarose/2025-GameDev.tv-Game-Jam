@@ -3,21 +3,22 @@
 [ext_resource type="Script" path="res://Scripts/start_page.gd" id="1_tk5l4"]
 [ext_resource type="Texture2D" uid="uid://vgiixvxodpcu" path="res://Background Layers/main page (no text).png" id="2_7eft8"]
 [ext_resource type="Texture2D" uid="uid://be3ufm66qqcxh" path="res://Jungle Pack UI/PNG/btn/music.png" id="3_ue7lv"]
-[ext_resource type="Texture2D" uid="uid://b1ruo31m3aq4b" path="res://Jungle Pack UI/PNG/btn/hover_music_off.png" id="3_w78t6"]
 [ext_resource type="AudioStream" uid="uid://cvl00iwtnt2qj" path="res://Main Song/Jungle (looped).wav" id="4_tfuir"]
-[ext_resource type="Texture2D" uid="uid://b3x80gsq0s6bs" path="res://Jungle Pack UI/PNG/btn/music_off.png" id="4_xusbh"]
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="5_oer7q"]
-[ext_resource type="Texture2D" uid="uid://cgps78mjn5e2y" path="res://Jungle Pack UI/PNG/btn/hover_music.png" id="6_yvgnv"]
+[ext_resource type="Texture2D" uid="uid://bs4pwacs1nhfh" path="res://Jungle Pack UI/PNG/btn/hover_music_off.png" id="5_vfd32"]
+[ext_resource type="Texture2D" uid="uid://dsh6mwxiuxqdd" path="res://Jungle Pack UI/PNG/btn/hover_music.png" id="6_irf5k"]
 [ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="7_f8iyr"]
-[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="8_0ftrj"]
 [ext_resource type="Texture2D" uid="uid://df70b1stgqjks" path="res://Jungle Pack UI/PNG/btn/close.png" id="9_3s0ds"]
+[ext_resource type="Texture2D" uid="uid://bnwojvabv86kn" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="10_rfcmh"]
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="10_y3q8d"]
-[ext_resource type="Texture2D" uid="uid://c55gjd642hiwq" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="11_jopr0"]
+[ext_resource type="Texture2D" uid="uid://dcwek10e3pdtg" path="res://Jungle Pack UI/PNG/btn/hover_close.png" id="12_m8nn1"]
 [ext_resource type="Texture2D" uid="uid://lsvdwqj1g6ua" path="res://Jungle Pack UI/PNG/btn/about.png" id="12_uks1m"]
-[ext_resource type="Texture2D" uid="uid://bb6xqbkoybui0" path="res://Jungle Pack UI/PNG/btn/hover_info.png" id="13_037un"]
-[ext_resource type="Texture2D" uid="uid://sa8jr2optyhx" path="res://Jungle Pack UI/PNG/btn/credit.png" id="16_ow04x"]
-[ext_resource type="Texture2D" uid="uid://clh4isf7tb54s" path="res://Jungle Pack UI/PNG/btn/hover_credit.png" id="17_7w1wh"]
+[ext_resource type="Texture2D" uid="uid://d3oceithgpkc1" path="res://Jungle Pack UI/PNG/btn/hover_info.png" id="14_3gg0q"]
+[ext_resource type="Texture2D" uid="uid://dap617say6cj6" path="res://Jungle Pack UI/PNG/btn/credit.png" id="15_en46w"]
+[ext_resource type="Texture2D" uid="uid://e1i3da10t8dh" path="res://Jungle Pack UI/PNG/btn/hover_credit.png" id="16_c8l6m"]
+[ext_resource type="Texture2D" uid="uid://bwgspw0wxkg2n" path="res://Jungle Pack UI/PNG/btn/hover_sound_off.png" id="18_ibw26"]
 [ext_resource type="Texture2D" uid="uid://dccoxcsf0y36j" path="res://Jungle Pack UI/PNG/btn/sound.png" id="18_txobs"]
+[ext_resource type="Texture2D" uid="uid://dtmajxmifm2iv" path="res://Jungle Pack UI/PNG/btn/hover_sound_on.png" id="19_qnjqa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4defi"]
 font = ExtResource("5_oer7q")
@@ -37,8 +38,6 @@ font_size = 65
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ithd"]
-
 [node name="StartPage" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -47,11 +46,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tk5l4")
-normal_off = ExtResource("3_ue7lv")
-hover_off = ExtResource("6_yvgnv")
-normal_on = ExtResource("4_xusbh")
-hover_on = ExtResource("3_w78t6")
 metadata/_edit_horizontal_guides_ = [324.0, 515.0]
+metadata/_edit_vertical_guides_ = [104.0, 736.0]
 
 [node name="MainPage(noText)" type="Sprite2D" parent="."]
 position = Vector2(960, 536)
@@ -79,15 +75,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.239
 anchor_bottom = 0.137
-offset_left = 152.0
-offset_top = 515.0
-offset_right = 276.12
-offset_bottom = 582.04
+offset_left = 104.0
+offset_top = 512.0
+offset_right = -139.88
+offset_bottom = 579.04
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 texture_normal = ExtResource("3_ue7lv")
-texture_pressed = ExtResource("4_xusbh")
-texture_hover = ExtResource("6_yvgnv")
+texture_pressed = ExtResource("5_vfd32")
+texture_hover = ExtResource("6_irf5k")
 
 [node name="Music On_Off" type="Label" parent="ToggleSound"]
 layout_mode = 0
@@ -108,45 +104,42 @@ autoplay = true
 
 [node name="TextureButton (Play)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 146.0
-offset_top = 324.0
-offset_right = 361.0
-offset_bottom = 539.0
+offset_left = 104.0
+offset_top = 320.0
+offset_right = 319.0
+offset_bottom = 535.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("7_f8iyr")
 texture_pressed = ExtResource("10_y3q8d")
-texture_hover = ExtResource("8_0ftrj")
+texture_hover = ExtResource("10_rfcmh")
 
 [node name="Start" type="Label" parent="TextureButton (Play)"]
 layout_mode = 0
-offset_left = 245.098
-offset_top = 58.2867
-offset_right = 651.098
-offset_bottom = 274.287
+offset_left = 253.333
+offset_top = 53.3333
+offset_right = 447.333
+offset_bottom = 128.333
 scale = Vector2(1.68317, 1.34724)
-text = "Start
-
-
-"
+text = "Start"
 label_settings = SubResource("LabelSettings_qjo7u")
 
 [node name="TextureButton (Quit)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 769.0
-offset_top = 713.0
-offset_right = 984.0
-offset_bottom = 928.0
+offset_left = 736.0
+offset_top = 704.0
+offset_right = 951.0
+offset_bottom = 919.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("9_3s0ds")
 texture_pressed = ExtResource("10_y3q8d")
-texture_hover = ExtResource("11_jopr0")
+texture_hover = ExtResource("12_m8nn1")
 
 [node name="Quit" type="Label" parent="TextureButton (Quit)"]
 layout_mode = 0
-offset_left = 276.143
-offset_top = 48.8348
-offset_right = 682.143
-offset_bottom = 191.835
+offset_left = 266.667
+offset_top = 53.3333
+offset_right = 672.667
+offset_bottom = 206.333
 scale = Vector2(1.68317, 1.34724)
 text = "Quit
 
@@ -155,21 +148,21 @@ label_settings = SubResource("LabelSettings_qjo7u")
 
 [node name="TextureButton (Info)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 769.0
-offset_top = 324.0
-offset_right = 984.0
-offset_bottom = 539.0
+offset_left = 736.0
+offset_top = 320.0
+offset_right = 951.0
+offset_bottom = 535.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("12_uks1m")
 texture_pressed = ExtResource("10_y3q8d")
-texture_hover = ExtResource("13_037un")
+texture_hover = ExtResource("14_3gg0q")
 
 [node name="Instructions" type="Label" parent="TextureButton (Info)"]
 layout_mode = 0
-offset_left = 276.143
-offset_top = 58.2866
-offset_right = 686.143
-offset_bottom = 201.287
+offset_left = 266.667
+offset_top = 53.3333
+offset_right = 710.667
+offset_bottom = 206.333
 scale = Vector2(1.68317, 1.34724)
 text = "Instructions
 
@@ -178,21 +171,21 @@ label_settings = SubResource("LabelSettings_qjo7u")
 
 [node name="TextureButton (Credits)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 152.0
-offset_top = 713.0
-offset_right = 367.0
-offset_bottom = 928.0
+offset_left = 104.0
+offset_top = 704.0
+offset_right = 319.0
+offset_bottom = 919.0
 scale = Vector2(0.6, 0.6)
-texture_normal = ExtResource("16_ow04x")
+texture_normal = ExtResource("15_en46w")
 texture_pressed = ExtResource("10_y3q8d")
-texture_hover = ExtResource("17_7w1wh")
+texture_hover = ExtResource("16_c8l6m")
 
 [node name="Instructions" type="Label" parent="TextureButton (Credits)"]
 layout_mode = 0
-offset_left = 238.333
-offset_top = 58.3333
-offset_right = 648.333
-offset_bottom = 211.333
+offset_left = 253.333
+offset_top = 53.3333
+offset_right = 663.333
+offset_bottom = 206.333
 scale = Vector2(1.68317, 1.34724)
 text = "Credits
 
@@ -201,21 +194,21 @@ label_settings = SubResource("LabelSettings_qjo7u")
 
 [node name="TextureButton (SFX)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 775.0
-offset_top = 515.0
-offset_right = 990.0
-offset_bottom = 730.0
+offset_left = 736.0
+offset_top = 512.0
+offset_right = 951.0
+offset_bottom = 727.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("18_txobs")
-texture_pressed = ExtResource("10_y3q8d")
-texture_hover = SubResource("CompressedTexture2D_3ithd")
+texture_pressed = ExtResource("18_ibw26")
+texture_hover = ExtResource("19_qnjqa")
 
-[node name="Instructions" type="Label" parent="TextureButton (SFX)"]
+[node name="SFX On_Off" type="Label" parent="TextureButton (SFX)"]
 layout_mode = 0
-offset_left = 238.333
-offset_top = 58.3333
-offset_right = 648.333
-offset_bottom = 211.333
+offset_left = 266.667
+offset_top = 53.3333
+offset_right = 676.667
+offset_bottom = 206.333
 scale = Vector2(1.68317, 1.34724)
 text = "SFX On/Off
 
@@ -229,4 +222,3 @@ label_settings = SubResource("LabelSettings_qjo7u")
 [connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]
 [connection signal="pressed" from="TextureButton (Info)" to="." method="_on_texture_button_info_pressed"]
 [connection signal="pressed" from="TextureButton (Credits)" to="." method="_on_texture_button_credits_pressed"]
-[connection signal="pressed" from="TextureButton (SFX)" to="." method="_on_texture_button_credits_pressed"]

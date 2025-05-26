@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="3_xon8s"]
 [ext_resource type="Texture2D" uid="uid://bv7om44lddpx2" path="res://Jungle Pack UI/PNG/btn/play.png" id="4_wtrvi"]
 [ext_resource type="Texture2D" uid="uid://bktihd0ivuhg7" path="res://Jungle Pack UI/PNG/btn/yellow splat (btn).png" id="5_tpmxr"]
-[ext_resource type="Texture2D" uid="uid://b4nuh56fi1gw8" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_dqaxf"]
+[ext_resource type="Texture2D" uid="uid://bnwojvabv86kn" path="res://Jungle Pack UI/PNG/btn/hover_play.png" id="6_jrpnu"]
 [ext_resource type="Texture2D" uid="uid://dijrqebvvvwj8" path="res://Jungle Pack UI/PNG/btn/menu.png" id="7_8ga7a"]
-[ext_resource type="Texture2D" uid="uid://dqe6q35522fpr" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="8_xiurv"]
+[ext_resource type="Texture2D" uid="uid://bfdf2p5y7bvuw" path="res://Jungle Pack UI/PNG/btn/hover_menu.png" id="8_rk52y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_txaxa"]
 font = ExtResource("3_xon8s")
@@ -44,6 +44,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_laosp")
+metadata/_edit_horizontal_guides_ = [1024.0]
+metadata/_edit_vertical_guides_ = [64.0, 1856.0]
 
 [node name="AquaGradientLighter" type="Sprite2D" parent="."]
 position = Vector2(968, 528)
@@ -80,10 +82,10 @@ horizontal_alignment = 1
 
 [node name="Credits (sourced)" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 184.0
-offset_right = 1755.0
-offset_bottom = 981.0
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 1859.0
+offset_bottom = 989.0
 
 [node name="Credits" type="Label" parent="Credits (sourced)"]
 layout_mode = 2
@@ -107,24 +109,24 @@ label_settings = SubResource("LabelSettings_xuxw2")
 
 [node name="TextureButton (Back)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 920.0
-offset_right = 1148.0
-offset_bottom = 1229.0
+offset_left = 128.0
+offset_top = 892.0
+offset_right = 342.0
+offset_bottom = 1107.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("4_wtrvi")
 texture_pressed = ExtResource("5_tpmxr")
-texture_hover = ExtResource("6_dqaxf")
+texture_hover = ExtResource("6_jrpnu")
 flip_h = true
 
 [node name="Back" type="MarginContainer" parent="TextureButton (Back)"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = -57.0
-offset_right = 1340.0
-offset_bottom = 252.0
+offset_left = 240.0
+offset_top = 73.3333
+offset_right = 406.0
+offset_bottom = 148.333
 
-[node name="Back" type="Label" parent="TextureButton (Back)/Back"]
+[node name="Back2" type="Label" parent="TextureButton (Back)/Back"]
 layout_mode = 2
 text = "Back
 "
@@ -132,21 +134,21 @@ label_settings = SubResource("LabelSettings_r5bfe")
 
 [node name="TextureButton (Menu)" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1640.0
-offset_top = 904.0
-offset_right = 1855.0
-offset_bottom = 1119.0
+offset_left = 1600.0
+offset_top = 892.0
+offset_right = 1815.0
+offset_bottom = 1107.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("7_8ga7a")
 texture_pressed = ExtResource("5_tpmxr")
-texture_hover = ExtResource("8_xiurv")
+texture_hover = ExtResource("8_rk52y")
 
 [node name="Menu" type="MarginContainer" parent="TextureButton (Menu)"]
 layout_mode = 0
-offset_left = 248.0
-offset_top = -57.0
-offset_right = 1340.0
-offset_bottom = 252.0
+offset_left = 240.0
+offset_top = 73.3333
+offset_right = 404.0
+offset_bottom = 148.333
 
 [node name="Menu" type="Label" parent="TextureButton (Menu)/Menu"]
 layout_mode = 2
