@@ -180,6 +180,7 @@ func throw_projectile() -> void:
 
 func jump() -> void:
 	velocity.y = -jump_amount
+	SfxManager.play_sfx("Jump")
 
 
 func accelerate_horizontally(horizontal_direction: float, delta: float) -> void:
