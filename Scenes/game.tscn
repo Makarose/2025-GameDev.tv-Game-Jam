@@ -48,7 +48,6 @@ script = ExtResource("1_yrajc")
 end_screen = ExtResource("2_tfe5t")
 
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
-visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -113,7 +112,6 @@ script = ExtResource("2_6a7ij")
 script = ExtResource("2_r6be6")
 
 [node name="RingBoundary" type="StaticBody2D" parent="."]
-visible = false
 z_index = 10
 scale = Vector2(2, 2)
 collision_layer = 4
