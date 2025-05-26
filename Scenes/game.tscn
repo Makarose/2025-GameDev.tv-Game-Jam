@@ -58,7 +58,6 @@ collision_mask = 0
 script = ExtResource("18_b5a1h")
 banana_bunch = ExtResource("19_svt83")
 orange = ExtResource("20_0oio1")
-can_generate_bananas = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallingItemGenerator"]
 shape = SubResource("RectangleShape2D_wnjfi")
@@ -135,7 +134,7 @@ scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_lf18l")
-contract_rate = 0.05
+contract_rate = 0.02
 contract_acceleration = 0.0
 expand_amount = 0.1
 
@@ -607,6 +606,7 @@ shape = SubResource("RectangleShape2D_lr1ly")
 
 [node name="MainSong" type="AudioStreamPlayer2D" parent="Camera2D"]
 stream = ExtResource("14_bthex")
+volume_db = -4.0
 autoplay = true
 
 [node name="LevelGenerator" parent="." instance=ExtResource("7_pa1g6")]

@@ -2,7 +2,7 @@ class_name RingBoundary
 extends StaticBody2D
 
 
-@export var can_contract: bool = true
+@export var can_contract: bool = false
 @export var contract_rate: float = 0.01
 @export var contract_acceleration: float = 0.01
 @export var expand_amount: float = 0.05

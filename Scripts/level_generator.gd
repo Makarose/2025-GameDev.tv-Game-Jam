@@ -6,7 +6,7 @@ extends Node2D
 # Level gen variables
 var viewport_size
 var start_platform_y
-var level_size = 50
+var level_size = 5
 var generated_platform_count = 0
 var platform_width: int = 150
 var platforms_array_size: int

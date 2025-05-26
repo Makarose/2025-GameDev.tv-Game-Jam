@@ -16,12 +16,12 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	var random_number: int = randi_range(0, 30)
+	var random_number: int = randi_range(0, 100)
 	if can_generate_bananas:
-		if random_number <= 5:
+		if random_number <= 2:
 			generate_bananas()
 	if can_generate_oranges:
-		if random_number >= 26:
+		if random_number >= 28:
 			generate_orange()
 
 

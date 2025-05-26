@@ -8,6 +8,7 @@ signal player_death
 signal projectile_count_updated(count: int)
 signal distance_updated(distance: int)
 
+var can_create_enemy: bool = false
 
 var player_health: int = 3:
 	set(value):

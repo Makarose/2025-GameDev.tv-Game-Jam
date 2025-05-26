@@ -43,8 +43,9 @@ func add_random_objects() -> void:
 			var new_pickup = projectile_pickup.instantiate()
 			add_child(new_pickup)
 			new_pickup.position = Vector2(pickup_x_pos, pickup_y_pos)
-		elif random_number >= 18 and (pickup_x_pos + slime_enemy_width < platform_sprite_width) and not enemy_created:
-			enemy_created = true
-			var new_enemy = slime_enemy.instantiate()
-			add_child(new_enemy)
-			new_enemy.position = Vector2(clampi(pickup_x_pos, enemy_margin, platform_sprite_width - enemy_margin), enemy_y_pos)
+		elif random_number >= 18 and (pickup_x_pos + slime_enemy_width < platform_sprite_width) and SignalBus.can_create_enemy:
+			if not enemy_created:
+				enemy_created = true
+				var new_enemy = slime_enemy.instantiate()
+				add_child(new_enemy)
+				new_enemy.position = Vector2(clampi(pickup_x_pos, enemy_margin, platform_sprite_width - enemy_margin), enemy_y_pos)

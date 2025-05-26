@@ -31,6 +31,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	# Check height reached and switch on game mechanics depending on no. of feet
+	enable_mechanics_by_height()
+	
 	# Set FallingItemGenerator position to match RingBoundary position
 	falling_item_generator.position = Vector2(0, ring_boundary.position.y)
 	
@@ -40,6 +43,18 @@ func _process(delta: float) -> void:
 	var bottom_of_screen: int = camera_center.y + (viewport_size.y / 2)
 	if (player_position.y - 256) > bottom_of_screen:
 		player.state = States.DEATH
+
+
+func enable_mechanics_by_height() -> void:
+	match SignalBus.distance_climbed:
+		30:
+			ring_boundary.can_contract = true
+		60:
+			SignalBus.can_create_enemy = true
+		100:
+			falling_item_generator.can_generate_bananas = true
+		140:
+			falling_item_generator.can_generate_oranges = true
 
 
 func _on_player_damage() -> void:
