@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b7l5gwlmk8f8y"]
+[gd_scene load_steps=34 format=4 uid="uid://b7l5gwlmk8f8y"]
 
 [ext_resource type="PackedScene" uid="uid://b31af15tfptdq" path="res://Scenes/player.tscn" id="1_bbx0x"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="1_kunpw"]
@@ -24,7 +24,12 @@
 [ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="16_u2ref"]
 [ext_resource type="Texture2D" uid="uid://0xtgbhkxbk1w" path="res://Mossy Tileset/Background Decorations/001.png" id="17_ebrbf"]
 [ext_resource type="FontFile" uid="uid://dtum6hucd3rqa" path="res://Fonts/FreeCheese-Regular.otf" id="17_mmxjc"]
+[ext_resource type="Script" path="res://Scripts/falling_item_generator.gd" id="18_b5a1h"]
+[ext_resource type="PackedScene" uid="uid://degqo7837j2ss" path="res://Scenes/bunch_projectile_pickup.tscn" id="19_svt83"]
+[ext_resource type="PackedScene" uid="uid://1e682dslv8h7" path="res://Scenes/orange.tscn" id="20_0oio1"]
 [ext_resource type="Texture2D" uid="uid://1pu7fw01y3ga" path="res://Mossy Tileset/Background Decorations/single platform.png" id="25_yqhv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnjfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr1ly"]
 
@@ -47,7 +52,19 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_yrajc")
 end_screen = ExtResource("2_tfe5t")
 
+[node name="FallingItemGenerator" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("18_b5a1h")
+banana_bunch = ExtResource("19_svt83")
+orange = ExtResource("20_0oio1")
+can_generate_bananas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallingItemGenerator"]
+shape = SubResource("RectangleShape2D_wnjfi")
+
 [node name="Foreground" parent="." instance=ExtResource("15_4jp4s")]
+visible = false
 
 [node name="GameUI" type="CanvasLayer" parent="."]
 script = ExtResource("2_ltyt3")
@@ -112,12 +129,13 @@ script = ExtResource("2_6a7ij")
 script = ExtResource("2_r6be6")
 
 [node name="RingBoundary" type="StaticBody2D" parent="."]
+visible = false
 z_index = 10
 scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_lf18l")
-contract_rate = 0.3
+contract_rate = 0.05
 contract_acceleration = 0.0
 expand_amount = 0.1
 

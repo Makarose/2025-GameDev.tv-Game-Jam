@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://1e682dslv8h7"]
+
+[ext_resource type="Texture2D" uid="uid://b3xv5fmo0xvjn" path="res://Sprites/Oranges and Bananas/orange.png" id="1_12kr5"]
+[ext_resource type="Script" path="res://Scripts/orange.gd" id="1_vktk2"]
+[ext_resource type="Texture2D" uid="uid://bimwk1gaf5x6a" path="res://Sprites/Oranges and Bananas/orange splat.png" id="2_eyjio"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lv1pv"]
+radius = 31.0
+
+[node name="Orange" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_vktk2")
+
+[node name="OrangeSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_12kr5")
+
+[node name="SplatSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_eyjio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lv1pv")
