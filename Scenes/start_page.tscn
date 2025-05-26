@@ -222,3 +222,4 @@ label_settings = SubResource("LabelSettings_qjo7u")
 [connection signal="pressed" from="TextureButton (Quit)" to="." method="_on_texture_button_quit_pressed"]
 [connection signal="pressed" from="TextureButton (Info)" to="." method="_on_texture_button_info_pressed"]
 [connection signal="pressed" from="TextureButton (Credits)" to="." method="_on_texture_button_credits_pressed"]
+[connection signal="pressed" from="TextureButton (SFX)" to="." method="_on_texture_button_sfx_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bteoqw23vodl7"]
+[gd_scene load_steps=15 format=3 uid="uid://bteoqw23vodl7"]
 
 [ext_resource type="Script" path="res://Scripts/sfx_manager.gd" id="1_cm83g"]
 [ext_resource type="AudioStream" uid="uid://brbjcabmgabiw" path="res://Sound Effects/Banana Man Sound Effects/Jump.ogg" id="2_17fcf"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://ct6158puq76pa" path="res://Sound Effects/Banana Man Sound Effects/Hit Ring 2.ogg" id="11_8r5se"]
 [ext_resource type="AudioStream" uid="uid://lv6luvek2vtc" path="res://Sound Effects/Banana Man Sound Effects/Lose Life Single 1.ogg" id="12_c1y5b"]
 [ext_resource type="AudioStream" uid="uid://do06jbx7gwbrl" path="res://Sound Effects/Banana Man Sound Effects/Lose Life Single 2.ogg" id="13_fpfuw"]
+[ext_resource type="AudioStream" uid="uid://3cfs2c7rgxns" path="res://Sound Effects/Menu - GUI_Sound_Effects_by_Lokif/click.wav" id="14_t7l6m"]
 
 [node name="SfxManager" type="Node"]
 script = ExtResource("1_cm83g")
@@ -52,4 +53,8 @@ stream = ExtResource("13_fpfuw")
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_17fcf")
+volume_db = -4.0
+
+[node name="Menu Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_t7l6m")
 volume_db = -4.0
