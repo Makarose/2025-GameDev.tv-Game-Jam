@@ -36,6 +36,7 @@ var is_dead: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var effects_animation_player: AnimationPlayer = $EffectsAnimationPlayer
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var feet_collision_shape: CollisionShape2D = $FeetCollisionShape
 @onready var projectile = preload("res://Scenes/player_projectile.tscn")
 @onready var left_ray_cast: RayCast2D = $LeftRayCast
 @onready var right_ray_cast: RayCast2D = $RightRayCast
@@ -131,6 +132,7 @@ func _physics_process(delta: float) -> void:
 		
 		States.DEATH:
 			collision_shape.disabled = true
+			feet_collision_shape.disabled = true
 			if not is_dead:
 				velocity.x = 400 * sign(anchor.scale.x)
 				velocity.y = -800

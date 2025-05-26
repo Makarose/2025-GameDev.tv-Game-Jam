@@ -690,10 +690,3 @@ autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_hryf1")
 }
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-self_modulate = Color(0.0862745, 1, 1, 0.901961)
-build_mode = 1
-polygon = PackedVector2Array(-16, -126, -23, -85, -33, -39, -36, -25, -31, -18, -2, -34, -10, -6, 21, -6, 20, -51, 30, -65, 37, -82, 41, -111, 39, -131, 33, -147, 28, -163, 10, -184, -6, -210, -16, -227, -27, -218, -28, -213, -16, -205, -12, -190, -13, -174)
-disabled = true
