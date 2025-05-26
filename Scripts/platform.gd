@@ -39,7 +39,7 @@ func add_random_objects() -> void:
 	for i in slots:
 		var pickup_x_pos: int = (i * projectile_width) + pickup_left_margin
 		var random_number = randi_range(0, 19)
-		if random_number <= 2:
+		if random_number <= 1:
 			var new_pickup = projectile_pickup.instantiate()
 			add_child(new_pickup)
 			new_pickup.position = Vector2(pickup_x_pos, pickup_y_pos)

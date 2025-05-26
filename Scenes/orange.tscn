@@ -8,6 +8,7 @@
 radius = 31.0
 
 [node name="Orange" type="Area2D"]
+z_index = 100
 collision_layer = 8
 script = ExtResource("1_vktk2")
 

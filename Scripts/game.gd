@@ -22,6 +22,7 @@ func _ready() -> void:
 	
 	SignalBus.player_health = 3
 	SignalBus.distance_climbed = 0
+	SignalBus.can_create_enemy = false
 	
 	SignalBus.player_damage.connect(_on_player_damage)
 	SignalBus.player_death.connect(_on_player_death)
@@ -47,19 +48,20 @@ func _process(delta: float) -> void:
 
 func enable_mechanics_by_height() -> void:
 	match SignalBus.distance_climbed:
+		25:
+			SignalBus.can_create_enemy = true
 		30:
 			ring_boundary.can_contract = true
-		60:
-			SignalBus.can_create_enemy = true
 		100:
 			falling_item_generator.can_generate_bananas = true
-		140:
+		120:
 			falling_item_generator.can_generate_oranges = true
 
 
 func _on_player_damage() -> void:
 	SfxManager.play_sfx("LoseLifeSingle1")
 	player.state = States.DAMAGE
+	camera_2d.add_trauma(0.3)
 
 
 func _on_player_death() -> void:

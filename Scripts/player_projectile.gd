@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@export var speed: float = 500.0
+@export var speed: float = 700.0
 @export var rotation_speed: float = 10.0
 
 var direction: int

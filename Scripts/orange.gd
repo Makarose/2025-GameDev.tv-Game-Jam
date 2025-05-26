@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 500.0
+@export var speed: float = 350.0
 
 var is_moving: bool = true
 

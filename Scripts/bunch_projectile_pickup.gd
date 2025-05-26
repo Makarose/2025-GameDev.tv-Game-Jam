@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@export var speed: float = 500.0
+@export var speed: float = 300.0
 @export var projectile_count: int = 3
 @export var sfx: String = "BunchBanana2"
 
