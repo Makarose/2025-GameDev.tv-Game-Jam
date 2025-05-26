@@ -18,42 +18,41 @@
 [node name="SfxManager" type="Node"]
 script = ExtResource("1_cm83g")
 
-[node name="LoseLifeFinal" type="AudioStreamPlayer2D" parent="."]
+[node name="LoseLifeFinal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_35ira")
 
-[node name="SingleBanana1" type="AudioStreamPlayer2D" parent="."]
+[node name="SingleBanana1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_42lon")
 
-[node name="SingleBanana2" type="AudioStreamPlayer2D" parent="."]
+[node name="SingleBanana2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_8nfu8")
 
-[node name="BunchBanana1" type="AudioStreamPlayer2D" parent="."]
+[node name="BunchBanana1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_134ra")
 
-[node name="BunchBanana2" type="AudioStreamPlayer2D" parent="."]
+[node name="BunchBanana2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_kg0ns")
 
-[node name="HitEnemy1" type="AudioStreamPlayer2D" parent="."]
+[node name="HitEnemy1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fbqwp")
 
-[node name="HitEnemy2" type="AudioStreamPlayer2D" parent="."]
+[node name="HitEnemy2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0pyt0")
 
-[node name="HitRing1" type="AudioStreamPlayer2D" parent="."]
+[node name="HitRing1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_n1qdq")
 
-[node name="HitRing2" type="AudioStreamPlayer2D" parent="."]
+[node name="HitRing2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_8r5se")
 
-[node name="LoseLifeSingle1" type="AudioStreamPlayer2D" parent="."]
+[node name="LoseLifeSingle1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_c1y5b")
 
-[node name="LoseLifeSingle2" type="AudioStreamPlayer2D" parent="."]
+[node name="LoseLifeSingle2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_fpfuw")
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_17fcf")
-volume_db = -4.0
 
 [node name="Menu Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_t7l6m")
