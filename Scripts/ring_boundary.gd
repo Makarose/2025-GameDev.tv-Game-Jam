@@ -19,4 +19,6 @@ func _process(delta: float) -> void:
 
 
 func expand_ring() -> void:
+	if not SfxManager.get_node("HitEnemy1").playing:
+		SfxManager.play_sfx("HitEnemy2")
 	scale += Vector2(expand_amount, expand_amount)

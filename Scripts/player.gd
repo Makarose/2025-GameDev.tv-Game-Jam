@@ -108,6 +108,7 @@ func _physics_process(delta: float) -> void:
 			if collision:
 				var other_collider = collision.get_collider()
 				if other_collider.name == "RingBoundary":
+					SfxManager.play_sfx("HitRing1")
 					var wall_normal = get_wall_normal()
 					var bounce_force := bounce_amount
 					if not is_on_floor():

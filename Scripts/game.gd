@@ -39,10 +39,12 @@ func _process(delta: float) -> void:
 
 
 func _on_player_damage() -> void:
+	SfxManager.play_sfx("LoseLifeSingle1")
 	player.state = States.DAMAGE
 
 
 func _on_player_death() -> void:
+	SfxManager.play_sfx("LoseLifeFinal")
 	player.state = States.DEATH
 
 

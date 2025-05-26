@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 
 
 func slime_take_damage() -> void:
+	SfxManager.play_sfx("HitEnemy1")
 	health -= 1
 	effects_animation_player.play("hit")
 	if health <= 0:
